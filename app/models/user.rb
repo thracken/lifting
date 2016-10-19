@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: {minimum: 10, maximum: 255}, allow_nil: true
   has_secure_password
 
+  has_many :routines
+  has_many :exercise_groups, through: :routines
+  has_many :workout_sessions
+  has_many :workout_exercises, through: :workout_sessions
+
   def User.new_token
     SecureRandom.urlsafe_base64
   end
