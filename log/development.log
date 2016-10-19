@@ -2955,3 +2955,7 @@ Migrating to FixExerciseIncremnetColumn (20161019214718)
             FROM sqlite_temp_master
             WHERE name='index_workout_exercises_on_session_id' AND type='index'
 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [[nil, 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [[nil, 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [[nil, 1]]
