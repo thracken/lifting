@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008062050) do
+ActiveRecord::Schema.define(version: 20161019073146) do
+
+  create_table "exercise_groups", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string   "name"
+    t.float    "weight"
+    t.float    "increment"
+    t.integer  "reps_goal"
+    t.integer  "sets_goal"
+    t.integer  "time_between_sets"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "routines", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -24,5 +47,23 @@ ActiveRecord::Schema.define(version: 20161008062050) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "workout_exercises", force: :cascade do |t|
+    t.integer  "session_id"
+    t.integer  "exercise_id"
+    t.integer  "sets"
+    t.integer  "reps"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "workout_exercises", ["exercise_id"], name: "index_workout_exercises_on_exercise_id"
+  add_index "workout_exercises", ["session_id"], name: "index_workout_exercises_on_session_id"
+
+  create_table "workout_sessions", force: :cascade do |t|
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

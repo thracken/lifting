@@ -2299,3 +2299,69 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_flash.html.erb (0.0ms)
   Rendered layouts/_header.html.erb (0.5ms)
 Completed 200 OK in 144ms (Views: 143.2ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRoutines (20161019070921)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161019070921"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateExerciseGroups (20161019071002)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161019071002"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateExercises (20161019071901)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161019071901"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateWorkoutSessions (20161019072953)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWorkoutSessions (20161019072953)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161019072953"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateWorkoutExercises (20161019073146)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" integer, "exercise_id" integer, "sets" integer, "reps" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_workout_exercises_on_session_id" ON "workout_exercises" ("session_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161019073146"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+[0m
