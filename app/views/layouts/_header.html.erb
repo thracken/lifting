@@ -1,11 +1,12 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <%= link_to "Site Name", root_url, html_options = {class: "navbar-brand"} %>
+      <%= link_to "Lifting", root_url, html_options = {class: "navbar-brand"} %>
     </div>
     <ul class="nav navbar-nav navbar-left">
-      <li><%= link_to 'Page', '#' %></li>
+      <li><%= link_to 'Sign Up', signup_url %></li>
       <% if logged_in? %>
+        <li><%= link_to 'Page', '#' %></li>
         <li><%= link_to 'Page 2', '#'%></li>
         <li><%= link_to 'Page 3', '#'%></li>
         <li><%= link_to 'Page 4', '#' %></li>
@@ -16,7 +17,6 @@
         <li><%= link_to current_user.name, edit_user_url(current_user) %></li>
         <li><%= link_to 'Log Out', logout_url, method: 'delete' %></li>
       <% else %>
-        <li><%= link_to 'Sign Up', signup_url %></li>
         <li><%= link_to 'Log In', login_url %></li>
       <% end %>
     </ul>
