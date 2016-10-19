@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019073146) do
+ActiveRecord::Schema.define(version: 20161019214718) do
 
   create_table "exercise_groups", force: :cascade do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161019073146) do
   create_table "exercises", force: :cascade do |t|
     t.string   "name"
     t.float    "weight"
-    t.float    "increment"
+    t.float    "weight_increment"
     t.integer  "reps_goal"
     t.integer  "sets_goal"
     t.integer  "time_between_sets"
