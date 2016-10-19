@@ -2425,3 +2425,85 @@ Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb
 
 
 Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-10-19 08:54:04 -0700
+
+
+Started GET "/" for ::1 at 2016-10-19 08:55:06 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 182ms (Views: 181.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-19 08:55:09 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (94.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 352ms (Views: 350.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-10-19 08:55:18 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ILhxgJ8mrUYgNgWqmV+4W5gN0WYaILOqYcnXEA2tvDm74x1N/RDeg9xgMr/2JWZ8nF9fHj3A/vKfyidY5mr5w==", "session"=>{"email"=>"jeffgreenland.1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeffgreenland.1@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 143ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2016-10-19 08:55:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 228ms (Views: 225.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-10-19 08:55:49 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GD1pG6HrSawGZZSmG1dSRgNAf8RlAqVJ0+sWnCnZ2rIuUASolGOQYxGUzHpO6rk+n1E1/YWdJHywExldCnbHpQ=="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-19 08:55:50 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 214ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-19 08:55:54 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 238ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-10-19 08:56:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TZAMPlkbEMBELIhrGzn/AZjCN0CYTzO9JThiNMFqEXd7/WGNbJPJD1Pd0LdOhBR5BNN9eXjQsohGwG314sUMYA==", "session"=>{"email"=>"jeffgreenland.1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeffgreenland.1@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-19 08:56:03 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 219ms (Views: 219.0ms | ActiveRecord: 0.0ms)
