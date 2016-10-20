@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="text-center panel panel-primary">
+      <div class="panel-heading"><h4>Workouts</h4></div>
+      <ul class="list-group">
+        <li class="list-group-item">Log a Workout</li>
+        <li class="list-group-item">View Old Workouts</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="text-center panel panel-primary">
+      <div class="panel-heading"><h4>Routines</h4></div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <%= link_to "Make a New Routine", new_routine_url %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to "Edit Existing Routines", routines_url %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
