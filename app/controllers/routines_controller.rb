@@ -1,4 +1,6 @@
 class RoutinesController < ApplicationController
+  before_action :logged_in_user, only: [:create, :index, :new]
+
   def new
     @routine = Routine.new
   end
@@ -18,9 +20,11 @@ class RoutinesController < ApplicationController
   end
 
   def show
+    @routine = Routine.find(params[:id])
   end
 
   def edit
+    @routine = Routine.find(params[:id])
   end
 
   def update
@@ -32,5 +36,13 @@ class RoutinesController < ApplicationController
   private
     def routine_params
       params.require(:routine).permit(:name)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "You need to log in to do that"
+        redirect_to login_url
+      end
     end
 end

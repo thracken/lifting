@@ -8,12 +8,14 @@
       <% @routines.each do |routine| %>
         <li class="list-group-item">
           <%= routine.name %>
-          <%= link_to edit_routine_url(routine) do %>
-            <span class="glyphicon glyphicon-pencil"></span>
-          <% end %>
-          <%= link_to routine_url(routine), data: {:confirm => 'Are you sure?'}, :method => :delete do %>
-            <span class="glyphicon glyphicon-remove"></span>
-          <% end %>
+          <div class="pull-right">
+            <%= link_to edit_routine_url(routine) do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+            <%= link_to routine_url(routine), data: {:confirm => 'Are you sure?'}, :method => :delete do %>
+              <span class="glyphicon glyphicon-remove"></span>
+            <% end %>
+          </div>
         </li>
       <% end %>
     </ul>
