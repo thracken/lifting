@@ -6,7 +6,7 @@ class RoutinesController < ApplicationController
   end
 
   def create
-    @routine = Routine.new(routine_params)
+    @routine = current_user.routines.build(routine_params)
     if @routine.save
       flash[:success] = "Routine added!"
       redirect_to routines_url
@@ -16,7 +16,7 @@ class RoutinesController < ApplicationController
   end
 
   def index
-    @routines = Routine.all
+    @routines = current_user.routines
   end
 
   def show
