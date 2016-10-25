@@ -9,9 +9,8 @@
         <li class="list-group-item">
           <%= routine.name %>
           <div class="pull-right">
-            <%= link_to new_routine_exercise_group_url(routine) do %>
-              <span class="glyphicon glyphicon-plus"></span>
-            <% end %>
+            <span class="glyphicon glyphicon-plus"></span>
+
             <%= link_to edit_routine_url(routine) do %>
               <span class="glyphicon glyphicon-pencil"></span>
             <% end %>
@@ -19,6 +18,9 @@
               <span class="glyphicon glyphicon-remove"></span>
             <% end %>
           </div>
+        </li>
+        <li class="list-group-item">
+          Add an Exercise Group
         </li>
       <% end %>
     </ul>
