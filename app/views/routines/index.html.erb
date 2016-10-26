@@ -11,10 +11,10 @@
           <div class="pull-right">
             <a href="" class="show-options-link" title="Add an exercise group."><span class="glyphicon glyphicon-plus"></span></a>
 
-            <%= link_to edit_routine_url(routine) do %>
+            <%= link_to edit_routine_url(routine), title: "Edit the name of this Routine" do %>
               <span class="glyphicon glyphicon-pencil"></span>
             <% end %>
-            <%= link_to routine_url(routine), data: {:confirm => 'Are you sure?'}, :method => :delete do %>
+            <%= link_to routine_url(routine), data: {:confirm => 'Are you sure?'}, title: "Delete this Routine", :method => :delete do %>
               <span class="glyphicon glyphicon-remove"></span>
             <% end %>
           </div>
