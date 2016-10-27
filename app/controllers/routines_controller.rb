@@ -11,7 +11,7 @@ class RoutinesController < ApplicationController
       flash[:success] = "Routine added!"
       redirect_to routines_url
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -28,6 +28,12 @@ class RoutinesController < ApplicationController
   end
 
   def update
+    @routine = Routine.find(params[:id])
+    if @routine.update_attributes(routine_params)
+      flash.now[:success] = "Routine updated!"
+    else
+      render "edit"
+    end
   end
 
   def destroy
