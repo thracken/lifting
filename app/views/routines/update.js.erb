@@ -1,1 +1,5 @@
 $("#routine-<%= @routine.id %>-name").html("<%= escape_javascript(render('routines/update')) %>");
+$("#flash").html("<%= escape_javascript(render('layouts/flash')) %>");
+setTimeout(function(){
+  $("#flash").slideToggle();
+}, 2000);
