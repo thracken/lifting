@@ -1,1 +1,4 @@
 $("#routine-<%= @routine.id %>-name").html("<%= escape_javascript(render('routines/edit')) %>");
+name = $("#routine_name").val();
+$("#routine_name").val(name);
+$("#routine_name").focus();

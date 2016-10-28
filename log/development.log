@@ -20647,3 +20647,193 @@ Processing by RoutinesController#update as JS
   Rendered layouts/_flash.html.erb (0.0ms)
   Rendered routines/update.js.erb (30.0ms)
 Completed 200 OK in 73ms (Views: 54.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-27 22:44:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (76.8ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 1719ms (Views: 1699.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-10-27 22:44:42 -0700
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:48:12 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 270ms (Views: 217.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:48:12 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:48:14 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (30.9ms)
+  Rendered routines/edit.js.erb (38.4ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:48:58 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 135ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:48:58 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:49:00 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:54:51 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 168ms (Views: 165.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:54:51 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:54:54 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (8.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:55:59 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:55:59 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:56:01 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (8.0ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:56:15 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 145.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:56:15 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:56:18 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.5ms)
+  Rendered routines/edit.js.erb (8.5ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 22:56:33 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 168ms (Views: 162.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 22:56:33 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 22:56:35 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (9.0ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 23:00:06 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 169ms (Views: 166.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 23:00:06 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 23:00:09 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (8.5ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-27 23:00:18 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 150.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-27 23:00:18 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-27 23:00:19 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (8.0ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
