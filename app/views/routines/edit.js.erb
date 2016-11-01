@@ -3,6 +3,12 @@ name = $("#routine_name").val();
 $("#routine_name").val(name);
 $("#routine_name").focus();
 
-$(document).on("focusout", "#routine-<%= @routine.id %>-name", function(){
+$(document).on("click", "#routine-<%= @routine.id %>-cancel", function(a){
+  a.preventDefault();
   $("#routine-<%= @routine.id %>-name").html("<%= escape_javascript(render('routines/update')) %>");
+  a.stopPropogation();
+});
+
+$(document).on("click", "input#routine_name", function(a){
+  a.stopPropogation();
 });

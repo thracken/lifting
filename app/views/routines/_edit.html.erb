@@ -1,4 +1,5 @@
 <%= form_for @routine, remote: true do |f| %>
   <%= f.text_field :name %>
   <%= f.submit "Save" %>
+  <%= f.button "Cancel", :id => "routine-#{@routine.id}-cancel" %>
 <% end %>

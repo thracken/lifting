@@ -21820,3 +21820,2163 @@ Completed 200 OK in 184ms (Views: 182.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:02:27 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:03:27 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:03:27 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (13.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:03:29 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (13.9ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:03:33 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/5" for ::1 at 2016-10-31 23:03:35 -0700
+Processing by RoutinesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtgfQCkp9p/zORxkTyots+xY4jwbbntKd9twIEfqvU/vmZQni9rvb2jGXZ4/z4d8P0VvfC/7X45AmlzmlqdJ1A==", "routine"=>{"name"=>"Extra Routine 2"}, "commit"=>"Save", "id"=>"5"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "routines" SET "name" = ?, "updated_at" = ? WHERE "routines"."id" = ?  [["name", "Extra Routine 2"], ["updated_at", "2016-11-01 06:03:35.205345"], ["id", 5]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered routines/update.js.erb (15.0ms)
+Completed 200 OK in 42ms (Views: 27.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 23:03:43 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 167ms (Views: 166.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:03:44 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 199ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:03:50 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:03:51 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:03:57 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:03:59 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:04:03 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 130.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:04:04 -0700
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:04:05 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:04:08 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/5" for ::1 at 2016-10-31 23:04:10 -0700
+Processing by RoutinesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sfLVv/V0Ok+2KivkD55L3lyz0iJZCOyn7xtBnx/IjHlQs17YV4cjvy3Vah5/e+ERj65fYm2dyGPYWm1ZzoV44g==", "routine"=>{"name"=>"Extra Routine"}, "commit"=>"Save", "id"=>"5"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "routines" SET "name" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["name", "Extra Routine"], ["updated_at", "2016-11-01 06:04:10.424389"], ["id", 5]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered routines/update.js.erb (14.5ms)
+Completed 200 OK in 40ms (Views: 24.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:04:34 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 125.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:04:34 -0700
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:04:36 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (14.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:04:48 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 217.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:04:49 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:04:53 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:04:56 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (13.5ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:06:45 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.8ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:06:52 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:06:58 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:06:59 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:07:00 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (16.5ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:07:01 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NtRbouq1c08yvergxVoG0+1I7Xac/jG6F3F6pHWRhNHXldDFSEZqv6lCqxq1v6wcPlVgNqhrFX4gMFZipNxwSg==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "button"=>"", "id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (66.6ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:07:08 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:08:12 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 133.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:08:12 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:08:14 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (28.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:08:15 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:08:17 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.1ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:09:07 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 131ms (Views: 129.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:09:08 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:09:09 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:10:23 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 129ms (Views: 126.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:10:24 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:10:26 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:10:27 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (29.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:10:27 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (27.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:10:31 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:10:32 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:11:05 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 121.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:11:06 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:11:07 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+...ppend=( f.button "Cancel" class: "routine-<%= @routine.id );...
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (24.8ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:11:08 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+...ppend=( f.button "Cancel" class: "routine-<%= @routine.id );...
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:11:08 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+...ppend=( f.button "Cancel" class: "routine-<%= @routine.id );...
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:11:08 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+...ppend=( f.button "Cancel" class: "routine-<%= @routine.id );...
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected keyword_class, expecting ')'
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:11:46 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 140ms (Views: 137.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:11:47 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:11:48 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (8.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected ':', expecting ')'
+...er.append=( f.button "Cancel" :class => "routine-<%= @routin...
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected ':', expecting ')'
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:11:59 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:11:59 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:12:00 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:12:21 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:12:22 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:12:23 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (26.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:13:35 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 133.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:13:36 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:13:37 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:13:49 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:13:49 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:13:51 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (18.0ms)
+  Rendered routines/edit.js.erb (24.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `submit_tag' for #<ActionView::Helpers::FormBuilder:0x995f1f0>):
+    1: <%= form_for @routine, remote: true do |f| %>
+    2:   <%= f.text_field :name %>
+    3:   <%= f.submit "Save" %>
+    4:   <%= f.submit_tag "Cancel" %>
+    5: <% end %>
+  app/views/routines/_edit.html.erb:4:in `block in _app_views_routines__edit_html_erb___650894358_76214376'
+  app/views/routines/_edit.html.erb:1:in `_app_views_routines__edit_html_erb___650894358_76214376'
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_69253536'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (20.9ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:14:05 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 156ms (Views: 153.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:14:06 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:14:07 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:14:09 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zUlDiIEldcxYP0g0QbIXxThJu3xQ2LfVsifx0R4CTCMsCMjvI9ZsPMPACc4xV70K61Q2PGRNkxGFZt0Xz0+4uA==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "commit"=>"Cancel", "id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.1ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:14:13 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:14:15 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gk9+wg0efUWTU1ruSeRr5C8p7nXazeStVoV6OGuxbsPSLacqsdgBY2yDJHJwjtgQ6Eq+eP+E1aCGzkuMOMxIA==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "commit"=>"Cancel", "id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (31.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.6ms)
+
+
+Started PUT "/__web_console/repl_sessions/400f9d97bef1f317a83dbc9c337d1834" for ::1 at 2016-10-31 23:14:22 -0700
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:15:17 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 139.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:15:17 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:15:19 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:16:47 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tQF1FElsI4Oe/1JNSd3LhXpRxKnHkFVmg/IwmFW8h35UQP5z6586cwUAE7c5OGFKqUxJ6fMFcaK0sxxehPFz5Q==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "Cancel"=>"Cancel", "id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (64.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:18:05 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:18:06 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5eGjJRfXygdwwdhivWvmQnd82ZnoYKJVilcqFAfvNtoEoChCtSTT9+s+mZjNjkyNpGFU2dz1hpG9FgbS1qLCQQ==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "cancel"=>"Cancel", "id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (29.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (63.1ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:19:20 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 166ms (Views: 149.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:19:20 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:19:22 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:19:26 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.9ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:19:35 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:19:38 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:19:42 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:19:44 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:22:42 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:22:43 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:22:44 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:23:58 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 128.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:23:59 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:24:00 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.5ms)
+  Rendered routines/edit.js.erb (10.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_70625292'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (29.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:25:34 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 150ms (Views: 148.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:25:35 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:25:36 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_70625292'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (27.7ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:26:14 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:26:15 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:26:16 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/edit.js.erb (7.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+...buffer.safe_append='-cancel" %>
+...                               ^
+C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views/routines/_edit.html.erb:5: unterminated string meets end of file):
+  app/views/routines/_edit.html.erb:4: syntax error, unexpected '>'
+  app/views/routines/_edit.html.erb:5: unterminated string meets end of file
+  app/views/routines/edit.js.erb:1:in `_app_views_routines_edit_js_erb___1009418452_70625292'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:26:46 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 134.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:26:47 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:26:49 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/routines/1" for ::1 at 2016-10-31 23:27:15 -0700
+Processing by RoutinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjlqETCGAmqtsBtH271g4URQ6zPMbIxjTRl63OPUb85XeOF2knUbmjZPWr2rWMoul01mc/j5qKd6WFYaMpmbVQ==", "routine"=>{"name"=>"Phrak's Grey Skill LP"}, "button"=>"", "id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template routines/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jeff/dropbox/github/ruby/rails/lifting/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (32.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (64.1ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:27:37 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 131ms (Views: 128.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:27:37 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:27:39 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:27:54 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 138ms (Views: 136.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:27:54 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:27:59 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.3ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:28:02 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:28:05 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:28:48 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/2" for ::1 at 2016-10-31 23:28:49 -0700
+Processing by RoutinesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtD4TyoDyfq7GDB7/Q+7UYDfEk0U85buxBdPheTVei4nkXMoiPDQCiDncYGN6hGeU8KfDSBmsirzVmNDNZiOtQ==", "routine"=>{"name"=>"Starting Strength LP"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered routines/update.js.erb (13.3ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:28:51 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.4ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/2" for ::1 at 2016-10-31 23:28:52 -0700
+Processing by RoutinesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g7FRoBFNnCoXPlR7KVTb+y31ig6ilT+m2w1OgRS/8Q1i8NrHs76F2ozBFYFZsXE0/ugHTpYAG2LsTGJHxfIFlg==", "routine"=>{"name"=>"Starting Strength LP"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered routines/update.js.erb (15.0ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:29:01 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:29:01 -0700
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:30:36 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 523ms (Views: 522.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/custom.self-9ca494ab0b96e4c38f0fdf2383dc1c29b61a5b34f093a18582f4ea0c1772b343.js?body=1" for ::1 at 2016-10-31 23:30:37 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:30:37 -0700
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:42:14 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 503ms (Views: 500.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/custom.self-e45ba92d09979e18ce60e53d83219ee5790d6bb691a87d3673f20828938d09c8.js?body=1" for ::1 at 2016-10-31 23:42:15 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:42:15 -0700
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:42:47 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:43:07 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 131ms (Views: 128.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:43:07 -0700
+
+
+Started GET "/routines/2/edit" for ::1 at 2016-10-31 23:43:13 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:43:38 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 131.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:43:39 -0700
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:44:15 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 506ms (Views: 501.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/custom.self-43b65a1b204ddf21918e46919424c232ebf800c15661a279e1d1f9688d682b3d.js?body=1" for ::1 at 2016-10-31 23:44:16 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:44:16 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:44:18 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.5ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:47:04 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.5ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:47:13 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:47:17 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (15.0ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-10-31 23:49:25 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-10-31 23:49:25 -0700
+
+
+Started GET "/routines/1/edit" for ::1 at 2016-10-31 23:49:27 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered routines/_edit.html.erb (1.0ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines/5/edit" for ::1 at 2016-10-31 23:49:32 -0700
+Processing by RoutinesController#edit as JS
+  Parameters: {"id"=>"5"}
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered routines/_edit.html.erb (0.5ms)
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered routines/edit.js.erb (14.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/routines/5" for ::1 at 2016-10-31 23:49:36 -0700
+Processing by RoutinesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W+ilRmnLKd8J5iDLEE44jZn3i/gTXn92DPaWORgnoHi6qS4hyzgwL5IZYTFgq5JCSuoGuCfLW7I7t7r/yWpU4w==", "routine"=>{"name"=>"Extra Routine 2"}, "commit"=>"Save", "id"=>"5"}
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "routines" SET "name" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["name", "Extra Routine 2"], ["updated_at", "2016-11-01 06:49:36.694069"], ["id", 5]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  Rendered routines/_update.html.erb (0.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered routines/update.js.erb (14.0ms)
+Completed 200 OK in 43ms (Views: 23.5ms | ActiveRecord: 15.5ms)
