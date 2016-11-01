@@ -25447,3 +25447,59 @@ Processing by RoutinesController#update as JS
   Rendered layouts/_flash.html.erb (0.0ms)
   Rendered routines/update.js.erb (15.6ms)
 Completed 200 OK in 85ms (Views: 31.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-11-01 14:58:02 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"exercise_groups"} missing required keys: [:routine_id]):
+    26:           </div>
+    27:         </li>
+    28:         <li class="list-group-item options-group" style="display: none;">
+    29:           <%= link_to "Add an Exercise Group", new_routine_exercise_group_url %>
+    30:         </li>
+    31:       <% end %>
+    32:     </ul>
+  app/views/routines/index.html.erb:29:in `block in _app_views_routines_index_html_erb__295329741_116210436'
+  app/views/routines/index.html.erb:12:in `_app_views_routines_index_html_erb__295329741_116210436'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-11-01 14:58:17 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered routines/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 258ms (Views: 255.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-11-01 14:58:18 -0700
+
+
+Started GET "/routines/7/exercise_groups/new" for ::1 at 2016-11-01 14:58:27 -0700
+Processing by ExerciseGroupsController#new as HTML
+  Parameters: {"routine_id"=>"7"}
+  Rendered exercise_groups/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 269ms (Views: 262.6ms | ActiveRecord: 0.0ms)
