@@ -1,5 +1,5 @@
 class RoutinesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :index, :new]
+  before_action :logged_in_user, only: [:create, :index, :new, :edit, :destroy]
 
   def new
     @routine = Routine.new

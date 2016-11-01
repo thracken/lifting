@@ -3,3 +3,8 @@
     <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
   <% end %>
 </div>
+<script>
+setTimeout(function(){
+  $("#flash").slideToggle();
+}, 2000);
+</script>
