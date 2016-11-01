@@ -1,10 +1,16 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 
+//Variables
+$dark-gray: #333;
+$gray: #555;
+$light-gray: #f0f0f0;
+
+
+//General
 body{
   padding-top: 70px;
 }
-
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -13,16 +19,24 @@ body{
     font-weight: normal;
   }
 }
-
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
 
+//Routines Page
 .white-text{
   color: #ffffff;
 }
 
 .show-options-link{
   cursor: pointer;
+  color: #428bca;
+  &:hover{
+    color: #2a6496;
+  }
+}
+
+.options-group{
+  background: $light-gray;
 }

@@ -1,4 +1,4 @@
 #Routines Index Page
 $(document).on("click", ".show-options-link", ->
-  $(this).next(".list-group-item").toggle()
+  $(this).parent().parent().parent().next(".list-group-item").toggle()
 )

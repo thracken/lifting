@@ -30,13 +30,16 @@ class RoutinesController < ApplicationController
   def update
     @routine = Routine.find(params[:id])
     if @routine.update_attributes(routine_params)
-      flash.now[:success] = "Routine updated!"      
+      flash.now[:success] = "Routine updated!"
     else
       render "edit"
     end
   end
 
   def destroy
+    Routine.find(params[:id]).destroy
+    flash[:success] = "Routine deleted!"
+    redirect_to routines_url
   end
 
   private
