@@ -3,7 +3,11 @@
 
 <div class="col-lg-8">
   <div class="panel panel-default panel-primary">
-    <div class="panel-heading">All Routines</div>
+    <div class="panel-heading">All Routines
+      <%= link_to new_routine_url do %>
+        <span class="glyphicon glyphicon-plus pull-right white-text"></span>
+      <% end %>
+    </div>
     <ul class="list-group">
       <% @routines.each do |routine| %>
         <li class="list-group-item">
