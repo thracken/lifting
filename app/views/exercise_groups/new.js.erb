@@ -1,0 +1,6 @@
+$("#routine-<%= @routine.id %>-options").html("<%= escape_javascript(render('exercise_groups/new')) %>");
+
+$(document).on("click", "#routine-<%= @routine.id %>-options-cancel", function(a){
+  a.preventDefault();
+  $("#routine-<%= @routine.id %>-options").html("");
+});

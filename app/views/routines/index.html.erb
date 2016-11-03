@@ -25,8 +25,8 @@
             </div>
           </div>
         </li>
-        <li class="list-group-item options-group" style="display: none;">
-          <%= link_to "Add an Exercise Group", new_routine_exercise_group_url(routine) %>
+        <li id="routine-<%= routine.id %>-options" class="list-group-item options-group" style="display: none;">
+          <%= link_to "Add an Exercise Group", new_routine_exercise_group_url(routine), remote: true %>
         </li>
       <% end %>
     </ul>
