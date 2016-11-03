@@ -16,15 +16,26 @@ class ExerciseGroupsController < ApplicationController
   end
 
   def edit
+    @exercise_group = ExerciseGroup.find(params[:id])
   end
 
   def update
+    @exercise_group = ExerciseGroup.find(params[:id])
+    if @exercise_group.update_attributes(exercise_group_params)
+      flash[:success] = "Group Updated!"
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    ExerciseGroup.find(params[:id]).destroy
+    flash[:success] = "Group deleted!"
+    redirect_to routines_url
   end
 
   private
     def exercise_group_params
+      params.require(:exercise_group).permit(:name)
     end
 end
