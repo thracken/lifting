@@ -13,7 +13,7 @@
         <li class="list-group-item">
           <div class="row">
             <div class="col-xs-11" id="routine-<%= routine.id %>-name">
-              <span class="show-options-link"><%= routine.name %></span>
+              <span class="glyphicon glyphicon-menu-down"></span> <%= routine.name %>
             </div>
             <div class="col-xs-1">
               <%= link_to edit_routine_url(routine), title: "Edit the name of this Routine", remote: true do %>
@@ -25,6 +25,11 @@
             </div>
           </div>
         </li>
+        <% routine.exercise_groups.each do |group| %>
+          <li class="list-group-item options-group">
+            <%= group.name %>
+          </li>
+        <% end %>
         <li id="routine-<%= routine.id %>-options" class="list-group-item options-group" style="display: none;">
           <%= link_to "Add an Exercise Group", new_routine_exercise_group_url(routine), remote: true %>
         </li>
