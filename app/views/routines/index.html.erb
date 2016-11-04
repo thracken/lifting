@@ -31,7 +31,7 @@
           </li>
         <% end %>
         <li id="routine-<%= routine.id %>-options" class="list-group-item options-group" style="display: none;">
-          <%= link_to "Add an Exercise Group", new_routine_exercise_group_url(routine), remote: true %>
+          <%= render "exercise_groups/add_group", routine: routine %>
         </li>
       <% end %>
     </ul>
