@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103004615) do
+ActiveRecord::Schema.define(version: 20161114212532) do
 
   create_table "exercise_groups", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20161103004615) do
   end
 
   add_index "exercise_groups", ["routine_id"], name: "index_exercise_groups_on_routine_id"
+
+  create_table "exercise_groups_exercises", id: false, force: :cascade do |t|
+    t.integer "exercise_id",       null: false
+    t.integer "exercise_group_id", null: false
+  end
+
+  add_index "exercise_groups_exercises", ["exercise_group_id"], name: "index_exercise_groups_exercises_on_exercise_group_id"
+  add_index "exercise_groups_exercises", ["exercise_id"], name: "index_exercise_groups_exercises_on_exercise_id"
 
   create_table "exercises", force: :cascade do |t|
     t.string   "name"

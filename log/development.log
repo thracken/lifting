@@ -44258,3 +44258,83 @@ Processing by RoutinesController#index as HTML
   Rendered layouts/_flash.html.erb (0.0ms)
   Rendered layouts/_header.html.erb (0.0ms)
 Completed 200 OK in 164ms (Views: 159.0ms | ActiveRecord: 2.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExercisesExerciseGroups (20161114212532)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161114212532"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_on_routine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_on_routine_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_session_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises"
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises"

@@ -5,6 +5,5 @@ class Exercise < ActiveRecord::Base
   validates :reps_goal, presence: true
   validates :sets_goal, presence: true
 
-  belongs_to :exercise_group
-
+  has_and_belongs_to_many :exercise_groups
 end
