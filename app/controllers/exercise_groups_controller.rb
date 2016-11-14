@@ -15,16 +15,13 @@ class ExerciseGroupsController < ApplicationController
     end
   end
 
-  def add_group
-    @routine = Routine.find(params[:routine_id])
-    render :partial => 'exercise_groups/add_group', routine: @routinegm
-  end
-
   def edit
+    @routine = Routine.find(params[:routine_id])
     @exercise_group = ExerciseGroup.find(params[:id])
   end
 
   def update
+    @routine = Routine.find(params[:routine_id])
     @exercise_group = ExerciseGroup.find(params[:id])
     if @exercise_group.update_attributes(exercise_group_params)
       flash[:success] = "Group Updated!"
@@ -42,6 +39,6 @@ class ExerciseGroupsController < ApplicationController
 
   private
     def exercise_group_params
-      params.require(:exercise_group).permit(:name)
+      params.require(:routine_exercise_group).permit(:name)
     end
 end
