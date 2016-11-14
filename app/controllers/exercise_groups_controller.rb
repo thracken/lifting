@@ -9,7 +9,7 @@ class ExerciseGroupsController < ApplicationController
     @exercise_group = @routine.exercise_groups.build(exercise_group_params)
     if @exercise_group.save
       flash[:success] = "Group Added!"
-      render routines_url
+      redirect_to routines_url
     else
       render "new"
     end
@@ -17,7 +17,7 @@ class ExerciseGroupsController < ApplicationController
 
   def add_group
     @routine = Routine.find(params[:routine_id])
-    render :partial => 'exercise_groups/add_group', routine: @routine
+    render :partial => 'exercise_groups/add_group', routine: @routinegm
   end
 
   def edit
@@ -28,6 +28,7 @@ class ExerciseGroupsController < ApplicationController
     @exercise_group = ExerciseGroup.find(params[:id])
     if @exercise_group.update_attributes(exercise_group_params)
       flash[:success] = "Group Updated!"
+      redirect_to routines_url
     else
       render "edit"
     end
