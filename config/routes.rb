@@ -5,11 +5,13 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-  get '/routines/:routine_id/exercise_groups/cancel' => 'exercise_groups#add_group', as: :cancel_group
-
   resources :users
   resources :routines do
     resources :exercise_groups, except: [:index, :show]
+  end
+
+  resources :exercise_groups do
+    resources :exercises, except: [:index, :show]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
