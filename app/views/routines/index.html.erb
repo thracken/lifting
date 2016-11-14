@@ -11,29 +11,28 @@
     <ul class="list-group">
       <% @routines.each do |routine| %>
         <li class="list-group-item">
-          <div class="row">
-            <div class="col-xs-11" id="routine-<%= routine.id %>-name">
-              <span class="glyphicon glyphicon-menu-down show-options-link"></span> <%= routine.name %>
-            </div>
-            <div class="col-xs-1">
-              <%= link_to edit_routine_url(routine), title: "Edit the name of this Routine", remote: true do %>
-                <span class="glyphicon glyphicon-pencil"></span>
-              <% end %>
-              <%= link_to routine_url(routine), data: {:confirm => 'Are you sure?'}, title: "Delete this Routine", :method => :delete do %>
-                <span class="glyphicon glyphicon-remove"></span>
-              <% end %>
-            </div>
-          </div>
+          <%= routine.name %>
+          <span class="pull-right">
+            <%= link_to edit_routine_url(routine) do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+            <%= link_to routine_url(routine), method: "delete", data: {:confirm => 'Are you sure? This cannot be undone.'} do %>
+              <span class="glyphicon glyphicon-remove"></span>
+            <% end %>
+          </span>
         </li>
         <% routine.exercise_groups.each do |group| %>
-          <li class="list-group-item options-group">
+          <li class="list-group-item">
             <%= group.name %>
           </li>
         <% end %>
-        <li id="routine-<%= routine.id %>-options" class="list-group-item options-group" style="display: none;">
-          <%= render "exercise_groups/add_group", routine: routine %>
+        <li class="list-group-item">
+          <%= link_to "Add Group", new_routine_exercise_group_url(routine) %>
         </li>
       <% end %>
+      <li class="list-group-item">
+        <%= link_to "Add Routine", new_routine_url %>
+      </li>
     </ul>
   </div>
 </div>

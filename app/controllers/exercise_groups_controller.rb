@@ -15,6 +15,11 @@ class ExerciseGroupsController < ApplicationController
     end
   end
 
+  def add_group
+    @routine = Routine.find(params[:routine_id])
+    render :partial => 'exercise_groups/add_group', routine: @routine
+  end
+
   def edit
     @exercise_group = ExerciseGroup.find(params[:id])
   end

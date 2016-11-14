@@ -1,5 +1,0 @@
-<%= form_for [@routine, @exercise_group], remote: true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Save" %>
-  <%= link_to "Cancel", "#", id: "routine-#{@routine.id}-options-cancel" %>
-<% end %>

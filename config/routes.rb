@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
-  
+
+  get '/routines/:routine_id/exercise_groups/cancel' => 'exercise_groups#add_group', as: :cancel_group
+
   resources :users
   resources :routines do
     resources :exercise_groups, except: [:index, :show]
