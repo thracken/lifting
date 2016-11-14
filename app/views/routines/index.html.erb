@@ -33,6 +33,9 @@
               <% end %>
             </span>
           </li>
+          <li class="list-group-item">
+            <%= link_to "Add Exercise", new_exercise_group_exercise_url(group) %>
+          </li>
         <% end %>
         <li class="list-group-item">
           <%= link_to "Add Group", new_routine_exercise_group_url(routine) %>
