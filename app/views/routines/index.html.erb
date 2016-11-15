@@ -35,7 +35,15 @@
           </li>
           <% group.exercises.each do |exercise| %>
             <li class="list-group-item">
-              <%= exercise.name %>
+              <%= "#{exercise.sets_goal}x#{exercise.reps_goal} #{exercise.name}" %>
+              <span class="pull-right">
+                <%= link_to edit_exercise_group_exercise_url(group, exercise) do %>
+                  <span class="glyphicon glyphicon-pencil"></span>
+                <% end %>
+                <%= link_to exercise_group_exercise_url(group, exercise), method: "delete", data: {:confirm => 'Are you sure? This cannot be undone.'} do %>
+                  <span class="glyphicon glyphicon-remove"></span>
+                <% end %>
+              </span>
             </li>
           <% end %>
           <li class="list-group-item">
