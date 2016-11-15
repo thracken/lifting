@@ -1,0 +1,46 @@
+<div class="row">
+<h2 class="col-xs-offset-2 col-xs-8">Add Exercise</h2>
+</div>
+<%= form_for [@exercise_group, @exercise], as: :group_exercise, :html =>{:class => "form-horizontal"} do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.text_field :name, autofocus: true, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :weight, class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.number_field :weight, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :weight_increment, "Increment", class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.number_field :weight_increment, class: "form-control", step: 0.25 %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reps_goal, "# Reps", class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.number_field :reps_goal, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sets_goal, "# Sets", class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.number_field :sets_goal, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :time_between_sets, "Rest Time", class: "control-label col-xs-2" %>
+    <div class="col-xs-4">
+      <%= f.number_field :time_between_sets, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-2 col-xs-8">
+      <%= f.submit "Save", class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>

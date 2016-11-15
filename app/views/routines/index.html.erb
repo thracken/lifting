@@ -33,6 +33,11 @@
               <% end %>
             </span>
           </li>
+          <% group.exercises.each do |exercise| %>
+            <li class="list-group-item">
+              <%= exercise.name %>
+            </li>
+          <% end %>
           <li class="list-group-item">
             <%= link_to "Add Exercise", new_exercise_group_exercise_url(group) %>
           </li>

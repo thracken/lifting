@@ -8,6 +8,7 @@ class ExercisesController < ApplicationController
     @exercise_group = ExerciseGroup.find(params[:exercise_group_id])
     @exercise = @exercise_group.exercises.build(exercise_params)
     if @exercise.save
+      @exercise_group.exercises << @exercise
       flash[:success] = "Exercise Added!"
       redirect_to routines_url
     else
@@ -39,6 +40,6 @@ class ExercisesController < ApplicationController
 
   private
     def exercise_params
-      params.require(:exercise).permit(:name)
+      params.require(:group_exercise).permit(:name,:weight,:weight_increment,:reps_goal,:sets_goal,:time_between_sets)
     end
 end
