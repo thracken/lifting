@@ -1,5 +1,2 @@
 <h2>Edit Group</h2>
-<%= form_for [@routine, @exercise_group], as: :routine_exercise_group do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Save" %>
-<% end %>
+<%= render "exercise_groups/form"%>

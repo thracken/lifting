@@ -1,0 +1,4 @@
+<%= form_for [@routine, @exercise_group], as: :routine_exercise_group do |f| %>
+  <%= f.text_field :name, autofocus: true %>
+  <%= f.submit "Save" %>
+<% end %>

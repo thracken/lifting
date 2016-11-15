@@ -1,5 +1,2 @@
 <h1>Edit Routine</h1>
-<%= form_for @routine, remote: true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Save" %>
-<% end %>
+<%= render "routines/form" %>
