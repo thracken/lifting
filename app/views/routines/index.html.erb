@@ -11,7 +11,11 @@
     <ul class="list-group">
       <% @routines.each do |routine| %>
         <li class="list-group-item">
-          <%= routine.name %>
+          <% if routine.active_status == 1 %>
+            <strong><%= routine.name %></strong>
+          <% else %>
+            <%= routine.name %>
+          <% end %>            
           <span class="pull-right">
             <%= link_to edit_routine_url(routine) do %>
               <span class="glyphicon glyphicon-pencil"></span>
