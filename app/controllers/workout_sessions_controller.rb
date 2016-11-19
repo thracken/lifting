@@ -1,12 +1,14 @@
 class WorkoutSessionsController < ApplicationController
   def index
-    @sessions = WorkoutSessions.all
+    @workout_sessions = WorkoutSession.all
   end
 
   def new
+    @workout_session = WorkoutSession.new
   end
 
   def create
+    
   end
 
   def edit
@@ -17,4 +19,8 @@ class WorkoutSessionsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def workout_sessions_params
+    end
 end

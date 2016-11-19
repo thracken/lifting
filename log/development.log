@@ -47601,3 +47601,304 @@ ActionView::MissingTemplate (Missing template workout_sessions/new, application/
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (145.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-18 09:06:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 3447ms (Views: 3427.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4bfdb2f66ed1b658e851a0d62bc9961e0b32d3f689fdbe5dbccb87eabcb1cad2.css?body=1" for ::1 at 2016-11-18 09:06:54 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-18 09:06:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-19 12:52:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 1421ms (Views: 1404.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e8529a39ecebc4168df028aa16cb23aea66b07918bb430721c3fe5163a680ee2.css?body=1" for 127.0.0.1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-19 12:52:55 -0700
+
+
+Started GET "/login" for ::1 at 2016-11-19 12:53:28 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (73.9ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-11-19 12:53:36 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3+7MTdT0wPDG1jjOOTcoCGDLCd++1IoWgrXwJ+ID7SnTiBMgSzz0fY+Mtjy0OJDFFDVQdUkBsrH9QGSQtr+46g==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@example.org"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 261ms (Views: 119.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/login" for ::1 at 2016-11-19 12:54:10 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nFdIS8jYQndMYC/RrD5NMNPoVMnHzXfaQXKSiZiPEC+QMZcmVxB2+gU6oSMhMfX9pxYNYzAYT30+hwY+zDNF7A==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@example.org"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 12:54:10 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions/new" for ::1 at 2016-11-19 13:07:53 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (12.0ms)
+Completed 200 OK in 333ms (Views: 332.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/workout_exercise.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 13:07:54 -0700
+
+
+Started GET "/workout_sessions/new" for ::1 at 2016-11-19 13:08:06 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 97ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-11-19 13:08:06 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.5ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (105.7ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 272ms (Views: 206.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 13:08:07 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2016-11-19 13:08:09 -0700
+Processing by WorkoutSessionsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant WorkoutSessionsController::WorkoutSessions):
+  app/controllers/workout_sessions_controller.rb:3:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.1ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2016-11-19 13:09:01 -0700
+
+ActionController::RoutingError (Couldn't find WorkoutExercisesHelper, expected it to be defined in helpers/workout_exercises_helper.rb):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/workout_sessions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.3ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.2ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (64.6ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2016-11-19 13:09:20 -0700
+
+ActionController::RoutingError (Couldn't find WorkoutExercisesHelper, expected it to be defined in helpers/workout_exercises_helper.rb):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/workout_sessions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.7ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (66.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 13:09:30 -0700
+
+ActionController::RoutingError (Couldn't find WorkoutExercisesHelper, expected it to be defined in helpers/workout_exercises_helper.rb):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.9ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 13:09:42 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 323ms (Views: 321.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-19 13:09:43 -0700
+
+
+Started GET "/workout_sessions" for ::1 at 2016-11-19 13:09:52 -0700
+Processing by WorkoutSessionsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant WorkoutSessionsController::WorkoutSessions):
+  app/controllers/workout_sessions_controller.rb:3:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (63.6ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2016-11-19 13:10:50 -0700
+Processing by WorkoutSessionsController#index as HTML
+  Rendered workout_sessions/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (17.0ms)
+Completed 200 OK in 128ms (Views: 122.6ms | ActiveRecord: 2.0ms)
+  [1m[36mWorkoutSession Load (2.5ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+
+
+Started GET "/" for ::1 at 2016-11-19 13:21:32 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 133ms (Views: 132.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions/new" for ::1 at 2016-11-19 13:21:34 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.5ms)
