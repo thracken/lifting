@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119205230) do
+ActiveRecord::Schema.define(version: 20161119230509) do
 
   create_table "exercise_groups", force: :cascade do |t|
     t.string   "name"
@@ -79,11 +79,13 @@ ActiveRecord::Schema.define(version: 20161119205230) do
 
   create_table "workout_sessions", force: :cascade do |t|
     t.datetime "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "user_id"
+    t.integer  "exercise_group_id"
   end
 
+  add_index "workout_sessions", ["exercise_group_id"], name: "index_workout_sessions_on_exercise_group_id"
   add_index "workout_sessions", ["user_id"], name: "index_workout_sessions_on_user_id"
 
 end
