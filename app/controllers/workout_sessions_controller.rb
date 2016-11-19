@@ -8,7 +8,7 @@ class WorkoutSessionsController < ApplicationController
   end
 
   def create
-    
+    @workout_session = current_user.workout_sessions.build
   end
 
   def edit
