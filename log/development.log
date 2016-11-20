@@ -48424,3 +48424,83 @@ Migrating to ChangeWorkoutSessionReferenceOnWorkoutExercises (20161119231928)
 
   [1m[36mWorkoutSession Load (1.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
   [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
+
+
+Started GET "/" for ::1 at 2016-11-20 11:34:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 246ms (Views: 243.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e8529a39ecebc4168df028aa16cb23aea66b07918bb430721c3fe5163a680ee2.css?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:33 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-20 11:34:34 -0700
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  ORDER BY "exercises"."id" ASC LIMIT 1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2016-11-20 18:53:51.913234"], ["updated_at", "2016-11-20 18:53:51.913234"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 2], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2016-11-20 18:53:51.934227"], ["updated_at", "2016-11-20 18:53:51.934227"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 3], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2016-11-20 18:53:51.952244"], ["updated_at", "2016-11-20 18:53:51.952244"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
