@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :workout_sessions
+  resources :workout_exercises, except: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
