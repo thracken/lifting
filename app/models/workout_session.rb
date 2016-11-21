@@ -6,8 +6,20 @@ class WorkoutSession < ActiveRecord::Base
     Routine.find_by(active_status: 1)
   end
 
-  def get_last_workout_group
-    ExerciseGroup.find(self.user.workout_sessions.last.exercise_group_id)
+  def get_next_workout_group
+    all_groups = self.get_active_routine.exercise_groups
+    last_group = ExerciseGroup.find(self.user.workout_sessions.last.exercise_group_id)
+
+    all_groups.each_with_index do |element, index|
+      next_in_line = all_groups[index+1]
+      if element.id = last_group.id
+        if next_in_line.nil?
+          return all_groups.first
+        else
+          return next_in_line
+        end
+      end
+    end
   end
 
   def build_workout_exercises(routine, group)

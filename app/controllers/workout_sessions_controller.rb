@@ -10,6 +10,7 @@ class WorkoutSessionsController < ApplicationController
   def create
     @workout_session = current_user.workout_sessions.build(workout_sessions_params)
     if @workout_session.save
+      @workout_session.build_workout_exercises(get_active_routine, get_next_workout_group)
       flash[:success] = "Session Started!"
       redirect_to @workout_session
     else
@@ -22,12 +23,16 @@ class WorkoutSessionsController < ApplicationController
   end
 
   def edit
+    @workout_session = WorkoutSession.find(params[:id])
   end
 
   def update
   end
 
   def destroy
+    WorkoutSession.find(params[:id]).destroy
+    flash[:success] = "Workout deleted!"
+    redirect_to workout_sessions_url
   end
 
   private
