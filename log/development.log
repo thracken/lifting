@@ -48613,3 +48613,25 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_flash.html.erb (0.1ms)
   Rendered layouts/_header.html.erb (0.7ms)
 Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mWorkoutSession Load (0.1ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1
+  [1m[36mWorkoutExercise Load (0.2ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRoutine Load (0.1ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.2ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mWorkoutSession Load (0.2ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = ?  ORDER BY "workout_sessions"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mWorkoutSession Load (1.3ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = ?  ORDER BY "workout_sessions"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mWorkoutSession Load (4.3ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1
+  [1m[36mWorkoutExercise Load (0.1ms)[0m  [1mSELECT  "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  ORDER BY "workout_exercises"."id" ASC LIMIT 1[0m  [["workout_session_id", 1]]
+  [1m[35mRoutine Load (1.3ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.2ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?[0m  [["exercise_group_id", 1], ["updated_at", "2016-11-21 01:00:28.135140"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWorkoutSession Load (0.3ms)[0m  SELECT "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = ?  [["user_id", 1]]
+  [1m[36mWorkoutSession Load (0.1ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
+  [1m[36mWorkoutSession Load (0.1ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSession Load (0.1ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = ?  ORDER BY "workout_sessions"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
