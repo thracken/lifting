@@ -6,10 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true)
-User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false)
+User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true, created_at: Time.now, updated_at: Time.now)
+User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false, created_at: Time.now, updated_at: Time.now)
 
-Routine.create(name: "Phrak's Grey Skill LP", user_id: 1)
+Routine.create(name: "Phrak's Grey Skull LP", user_id: 1)
+
+ExerciseGroup.create(id: 1, name: "Day A", routine_id: 1)
+group1 = ExerciseGroup.find_by(:name => "Day A")
+group1.exercises.create(name: "Bench Press", weight: 45, weight_increment: 2.5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+group1.exercises.create(name: "Squat", weight: 45, weight_increment: 5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+group1.exercises.create(name: "Chinup", weight: 45, weight_increment: 2.5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+
+ExerciseGroup.create(id: 2, name: "Day B", routine_id: 1)
+group2 = ExerciseGroup.find_by(:name => "Day B")
+group2.exercises.create(name: "Overhead Press", weight: 45, weight_increment: 2.5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+group2.exercises.create(name: "Barbell Rows", weight: 45, weight_increment: 2.5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+group2.exercises.create(name: "Deadlift", weight: 45, weight_increment: 5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
+
 Routine.create(name: "Starting Strength", user_id: 1)
 Routine.create(name: "Strong Lifts 5x5", user_id: 2)
-Routine.create(name: "Ice Cream LP", user_id: 2)

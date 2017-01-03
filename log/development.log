@@ -48812,3 +48812,1455 @@ Completed 200 OK in 144ms (Views: 141.6ms | ActiveRecord: 1.0ms)
   [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = ?  ORDER BY "workout_sessions"."id" DESC LIMIT 1[0m  [["user_id", 1]]
   [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", nil]]
+
+
+Started GET "/" for ::1 at 2016-11-21 09:09:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 17051ms (Views: 17002.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4bfdb2f66ed1b658e851a0d62bc9961e0b32d3f689fdbe5dbccb87eabcb1cad2.css?body=1" for ::1 at 2016-11-21 09:09:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-11-21 09:09:27 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-11-21 09:09:27 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-21 09:09:28 -0700
+
+
+Started GET "/" for ::1 at 2016-11-22 14:16:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 1971ms (Views: 1953.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4bfdb2f66ed1b658e851a0d62bc9961e0b32d3f689fdbe5dbccb87eabcb1cad2.css?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-22 14:16:41 -0700
+
+
+Started GET "/login" for ::1 at 2016-11-22 14:16:51 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (99.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (15.6ms)
+Completed 200 OK in 333ms (Views: 303.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-11-22 14:17:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZQdEwhUw3s1Xl+YJOIrl4lmwL6Ydg0luZus8BRYOidjWupbTnSi9YB47SrK4+4Fh8vkpZQfPE69YXBbCnDsVvQ==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@example.org"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 154ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-22 14:17:01 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 229ms (Views: 229.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-13 12:46:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 2981ms (Views: 2957.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/application.self-4bfdb2f66ed1b658e851a0d62bc9961e0b32d3f689fdbe5dbccb87eabcb1cad2.css?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-12-13 12:46:44 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-12-13 12:46:45 -0700
+
+
+Started GET "/login" for ::1 at 2016-12-13 12:46:49 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (239.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 613ms (Views: 611.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-12-13 12:46:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z42kCW8vFYIXfgjimQy2ZWU2/wig/7vKcuHATmsMzpArCGMfOjK2OSC6Q60H43GkzOyFOHwPM8pyRbFslkhX/w==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@example.org"]]
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 485ms (Views: 306.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2016-12-13 12:47:08 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p5iNtAW0gkNPuCPLUOls8hunXuCzW3V4mee/jU7zqrlDHUqiUKkh+Hh8aITOBqszsn0k0G+r/XiZQ86vs7cz1g==", "session"=>{"email"=>"jeff@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@example.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 330ms (Views: 327.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2016-12-13 12:47:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDEN19liZgjCae7TgsKYPxcfEhMRz9IJfsCAHuIHMONYtMrBjH/Fs/WtpZwcLV/+vsVoI80/Wgl+ZPE8H0OpjA==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@example.org"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-13 12:47:25 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 419ms (Views: 417.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/workout_sessions/new" for ::1 at 2016-12-13 12:47:33 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (4.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 392ms (Views: 366.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2016-12-13 13:16:07 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (10.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (160.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 628ms (Views: 535.9ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-12-13 13:16:08 -0700
+
+
+Started GET "/workout_sessions/new" for ::1 at 2016-12-13 13:27:19 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 343ms (Views: 328.7ms | ActiveRecord: 0.0ms)
+  [1m[36mWorkoutSession Load (6.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+
+
+Started GET "/routines" for ::1 at 2016-12-13 13:34:21 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 321ms (Views: 307.3ms | ActiveRecord: 0.0ms)
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (24.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (15.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (12.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (19.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (17.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (12.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (27.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (30.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (36.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (44.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (18.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (35.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (34.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (32.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (24.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (13.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (25.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (10.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (23.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (9.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (23.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (9.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (24.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (20.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (17.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (42.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (32.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (39.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (51.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (24.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$pyczAA.C5jWA/d8AjQg/QePjKVU31bfQLnRE9b3676nLAt1xlPrBi"], ["admin", "t"], ["created_at", "2016-12-13 20:40:42.151195"], ["updated_at", "2016-12-13 20:40:42.151195"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$zDHHvysXGf7SqUTXxYrPW.eSyd7Fxf471Wez3/mY0cZ9X82QY4PR2"], ["created_at", "2016-12-13 20:40:42.287209"], ["updated_at", "2016-12-13 20:40:42.287209"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skill LP"], ["user_id", 1], ["created_at", "2016-12-13 20:40:42.341214"], ["updated_at", "2016-12-13 20:40:42.341214"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercise_groups" ("name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Day A"], ["routine_id", 1], ["created_at", "2016-12-13 20:40:42.389219"], ["updated_at", "2016-12-13 20:40:42.389219"]]
+  [1m[36m (29.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bench Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.456226"], ["updated_at", "2016-12-13 20:40:42.456226"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Squat"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.477228"], ["updated_at", "2016-12-13 20:40:42.477228"]]
+  [1m[36m (21.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chinup"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.506231"], ["updated_at", "2016-12-13 20:40:42.506231"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "exercise_groups" ("name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Day B"], ["routine_id", 1], ["created_at", "2016-12-13 20:40:42.522232"], ["updated_at", "2016-12-13 20:40:42.522232"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Overhead Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.544234"], ["updated_at", "2016-12-13 20:40:42.544234"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Barbell Rows"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.567237"], ["updated_at", "2016-12-13 20:40:42.567237"]]
+  [1m[36m (18.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Deadlift"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2016-12-13 20:40:42.599240"], ["updated_at", "2016-12-13 20:40:42.599240"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2016-12-13 20:40:42.617242"], ["updated_at", "2016-12-13 20:40:42.617242"]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2016-12-13 20:40:42.641244"], ["updated_at", "2016-12-13 20:40:42.641244"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2016-12-13 13:41:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (66.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 1439ms (Views: 1417.3ms | ActiveRecord: 3.0ms)
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+
+
+Started GET "/routines" for ::1 at 2016-12-13 13:43:01 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (1.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (107.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 597ms (Views: 535.7ms | ActiveRecord: 4.0ms)
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  ORDER BY "exercises"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (15.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (15.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (18.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (12.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (12.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (22.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (13.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (21.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (27.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (40.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (39.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (35.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (35.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36m (21.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (14.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (9.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (20.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (28.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (28.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (3.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (18.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (12.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (13.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (38.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (18.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (38.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (34.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (23.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (49.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (6.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$v6bRjv.sDhS.Le16Yfyds.2b4A01AEzSXUPGZOy6aMZlRsdJ0lJNC"], ["admin", "t"], ["created_at", "2016-12-13 20:48:07.981700"], ["updated_at", "2016-12-13 20:48:07.981700"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$lvRTtPJFTSHxYfGwDlILF.rSSv0XlMWNe8mviImeSEQvRJzUmIHa6"], ["created_at", "2016-12-13 20:48:08.088711"], ["updated_at", "2016-12-13 20:48:08.088711"]]
+  [1m[36m (30.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skill LP"], ["user_id", 1], ["created_at", "2016-12-13 20:48:08.131713"], ["updated_at", "2016-12-13 20:48:08.131713"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercise_groups" ("name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Day A"], ["routine_id", 1], ["created_at", "2016-12-13 20:48:08.167717"], ["updated_at", "2016-12-13 20:48:08.167717"]]
+  [1m[36m (19.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Day B"], ["routine_id", 1], ["created_at", "2016-12-13 20:48:08.314727"], ["updated_at", "2016-12-13 20:48:08.314727"]]
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2016-12-13 20:48:08.334727"], ["updated_at", "2016-12-13 20:48:08.334727"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2016-12-13 20:48:08.345727"], ["updated_at", "2016-12-13 20:48:08.345727"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups"  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  ORDER BY "exercises"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2017-01-02 17:56:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 1532ms (Views: 1515.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e8529a39ecebc4168df028aa16cb23aea66b07918bb430721c3fe5163a680ee2.css?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-02 17:56:56 -0700
+
+
+Started GET "/login" for ::1 at 2017-01-02 17:58:21 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (92.1ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 185ms (Views: 184.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-01-02 17:58:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z7U3iF8mmZCHWAwNeZJNYdV97OYDXiNKY0clgFHHUqwbN2wGTslHfhPyUApcF42H5QY3Eh66/ftR5nPmZHi7ag==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@example.org"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-02 17:58:29 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 117.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 17:58:31 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (87.3ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 229ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2017-01-02 17:58:31 -0700
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."name" = ? LIMIT 1[0m  [["name", "Phrak's Grey Skill LP"]]
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (14.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (32.9ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (39.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (24.2ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (14.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (19.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (17.9ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (14.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (23.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (13.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (15.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (14.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (15.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (20.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (18.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (43.1ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (15.6ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (19.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$arM20sic3uegdfgdg.9f2.aXWwV/PtOTNGOciApfc7Ep8K06SWdm2"], ["admin", "t"], ["created_at", "2017-01-03 01:51:34.938518"], ["updated_at", "2017-01-03 01:51:34.938518"]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$e25ORroA28DD7Y1fXIIRWOkcY2JxW4V1g/e1p8s5MqFX06fzR/r/u"], ["created_at", "2017-01-03 01:51:35.028064"], ["updated_at", "2017-01-03 01:51:35.028064"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skull LP"], ["user_id", 1], ["created_at", "2017-01-03 01:51:35.050068"], ["updated_at", "2017-01-03 01:51:35.050068"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["name", "Day A"], ["routine_id", 1], ["created_at", "2017-01-03 01:51:35.077111"], ["updated_at", "2017-01-03 01:51:35.077111"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day A"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["name", "Day B"], ["routine_id", 1], ["created_at", "2017-01-03 01:51:35.129143"], ["updated_at", "2017-01-03 01:51:35.129143"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day B"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2017-01-03 01:51:35.145159"], ["updated_at", "2017-01-03 01:51:35.145159"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2017-01-03 01:51:35.162175"], ["updated_at", "2017-01-03 01:51:35.162175"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2017-01-02 18:54:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 418ms (Views: 404.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/application.self-e8529a39ecebc4168df028aa16cb23aea66b07918bb430721c3fe5163a680ee2.css?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-02 18:54:53 -0700
+
+
+Started GET "/routines" for ::1 at 2017-01-02 18:57:17 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (1.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (55.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 201ms (Views: 166.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2017-01-02 18:57:18 -0700
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1[0m  [["name", "\nDay A"]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day A"]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:10 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:14 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 109ms (Views: 107.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:17 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 93ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions/new" for ::1 at 2017-01-02 19:00:18 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 101ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:19 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.5ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 91.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:20 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 135ms (Views: 132.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:22 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-e8529a39ecebc4168df028aa16cb23aea66b07918bb430721c3fe5163a680ee2.css?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2017-01-02 19:00:23 -0700
+
+
+Started GET "/routines/1/exercise_groups/1/edit" for ::1 at 2017-01-02 19:00:28 -0700
+Processing by ExerciseGroupsController#edit as HTML
+  Parameters: {"routine_id"=>"1", "id"=>"1"}
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered exercise_groups/_form.html.erb (18.0ms)
+  Rendered exercise_groups/edit.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 128ms (Views: 121.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:00:30 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines"  ORDER BY "routines"."id" ASC LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[36m (19.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (20.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (40.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (12.4ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (21.8ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (45.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (25.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (18.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (18.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (11.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (11.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (12.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (15.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (12.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36m (26.3ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (13.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (22.3ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (13.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (18.2ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (12.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (19.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (18.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (15.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (44.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (36.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$AS91BNS0ujoJ.TIL67ldzO7Fxv1dswM6vzlf7MozB1Rvbm5YHHZb6"], ["admin", "t"], ["created_at", "2017-01-03 02:02:09.681638"], ["updated_at", "2017-01-03 02:02:09.681638"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$2LowGBU87y38MQZyjy6HCu.tjoqe2NVwzqQylclxIzMZLbki65m8C"], ["created_at", "2017-01-03 02:02:09.787739"], ["updated_at", "2017-01-03 02:02:09.787739"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skull LP"], ["user_id", 1], ["created_at", "2017-01-03 02:02:09.884831"], ["updated_at", "2017-01-03 02:02:09.884831"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["name", "Day A"], ["routine_id", 1], ["created_at", "2017-01-03 02:02:09.909855"], ["updated_at", "2017-01-03 02:02:09.909855"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day A"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bench Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:09.958902"], ["updated_at", "2017-01-03 02:02:09.958902"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 1]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Squat"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:09.987930"], ["updated_at", "2017-01-03 02:02:09.987930"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 2]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Chinup"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:10.004946"], ["updated_at", "2017-01-03 02:02:10.004946"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 3]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["name", "Day B"], ["routine_id", 1], ["created_at", "2017-01-03 02:02:10.020962"], ["updated_at", "2017-01-03 02:02:10.020962"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day B"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Overhead Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:10.038979"], ["updated_at", "2017-01-03 02:02:10.038979"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 4]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Barbell Rows"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:10.053996"], ["updated_at", "2017-01-03 02:02:10.053996"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 5]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Deadlift"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 02:02:10.071009"], ["updated_at", "2017-01-03 02:02:10.071009"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 6]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2017-01-03 02:02:10.090028"], ["updated_at", "2017-01-03 02:02:10.090028"]]
+  [1m[36m (23.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2017-01-03 02:02:10.117842"], ["updated_at", "2017-01-03 02:02:10.117842"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+
+
+Started GET "/users/1/edit" for ::1 at 2017-01-02 19:14:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/_errors.html.erb (4.0ms)
+  Rendered users/_form.html.erb (28.6ms)
+  Rendered users/edit.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 480ms (Views: 437.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-02 19:14:24 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (56.3ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 155.4ms | ActiveRecord: 2.0ms)
