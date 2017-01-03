@@ -1,0 +1,41 @@
+bench:
+  weight: 45
+  weight_increment: 2.5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90
+
+squat:
+  weight: 45
+  weight_increment: 5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90
+
+chinup:
+  weight: 45
+  weight_increment: 2.5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90
+
+press:
+  weight: 45
+  weight_increment: 2.5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90
+
+rows:
+  weight: 45
+  weight_increment: 2.5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90
+
+deadlift:
+  weight: 45
+  weight_increment: 5
+  reps_goal: 5
+  sets_goal: 3
+  time_between_sets: 90

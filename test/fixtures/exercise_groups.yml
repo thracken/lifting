@@ -1,7 +1,9 @@
 day_a:
   name: Day A
   routine: phraks
-  
+  exercises: bench, squat, chinup
+
 day_b:
   name: Day B
   routine: phraks
+  exercises: press, rows, deadlift

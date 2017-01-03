@@ -52017,3 +52017,5 @@ Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47
   [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2017-01-03 19:40:01.661920"], ["updated_at", "2017-01-03 19:40:01.661920"]]
   [1m[35m (10.0ms)[0m  commit transaction
   [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises"[0m
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  ORDER BY "exercises"."id" ASC LIMIT 1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises"
