@@ -9,7 +9,7 @@
 User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true, created_at: Time.now, updated_at: Time.now)
 User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false, created_at: Time.now, updated_at: Time.now)
 
-Routine.create(name: "Phrak's Grey Skull LP", user_id: 1)
+Routine.create(name: "Phrak's Grey Skull LP", user_id: 1, active_status: 1)
 
 ExerciseGroup.create(id: 1, name: "Day A", routine_id: 1)
 group1 = ExerciseGroup.find_by(:name => "Day A")

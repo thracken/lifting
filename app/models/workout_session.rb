@@ -3,7 +3,7 @@ class WorkoutSession < ActiveRecord::Base
   has_many :workout_exercises
 
   def get_active_routine
-    Routine.find_by(active_status: 1)
+    current_user.routines.find_by(active_status: 1)
   end
 
   def get_next_workout_group
