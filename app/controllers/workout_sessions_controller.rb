@@ -27,6 +27,13 @@ class WorkoutSessionsController < ApplicationController
   end
 
   def update
+    @workout_session = WorkoutSession.find(params[:id])
+    if @workout_session.update_attributes(workout_sessions_params)
+      flash[:success] = "Session updated!"
+      redirect_to routines_url
+    else
+      render "edit"
+    end
   end
 
   def destroy
