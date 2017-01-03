@@ -3,7 +3,12 @@ phraks:
   active_status: 1
   user: jeff
 
-stronglifts:
-  name: StrongLifts 5x5
+startingstrength:
+  name: Starting Strength
   active_status: 0
   user: jeff
+
+stronglifts:
+  name: StrongLifts 5x5
+  active_status: 1
+  user: jake
