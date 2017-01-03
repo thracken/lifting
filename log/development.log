@@ -50734,3 +50734,431 @@ Completed 200 OK in 445ms (Views: 444.6ms | ActiveRecord: 0.0ms)
   [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
   [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[36m (9.0ms)[0m  [1mDROP TABLE "exercise_groups"[0m
+  [1m[35m (52.0ms)[0m  CREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")
+  [1m[36m (10.0ms)[0m  [1mDROP TABLE "exercise_groups_exercises"[0m
+  [1m[35m (34.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (14.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (14.0ms)[0m  DROP TABLE "exercises"
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (20.0ms)[0m  DROP TABLE "routines"
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (14.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') 
+  [1m[36m (11.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (12.0ms)[0m  DROP TABLE "workout_exercises"
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (10.0ms)[0m  [1mDROP TABLE "workout_sessions"[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) 
+  [1m[36m (19.0ms)[0m  [1mCREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")[0m
+  [1m[35m (1.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (11.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (13.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (18.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (14.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (16.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (12.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (15.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (19.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (7.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (16.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$npk.fu/OQRBmJBq1mV0lReM7IyeCC83P2S7bxXVLcD0ymIRe2M8uG"], ["admin", "t"], ["created_at", "2017-01-03 16:28:54.248808"], ["updated_at", "2017-01-03 16:28:54.248808"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$jmfiYOJEMU2Mirf.o6i.meCMjtS3zlMW5Z6It76OImufPsuqzSV6e"], ["created_at", "2017-01-03 16:28:54.369808"], ["updated_at", "2017-01-03 16:28:54.369808"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "active_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skull LP"], ["user_id", 1], ["active_status", 1], ["created_at", "2017-01-03 16:28:54.481808"], ["updated_at", "2017-01-03 16:28:54.481808"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["name", "Day A"], ["routine_id", 1], ["created_at", "2017-01-03 16:28:54.509808"], ["updated_at", "2017-01-03 16:28:54.509808"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day A"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bench Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.625808"], ["updated_at", "2017-01-03 16:28:54.625808"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 1]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Squat"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.654808"], ["updated_at", "2017-01-03 16:28:54.654808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 2]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Chinup"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.675808"], ["updated_at", "2017-01-03 16:28:54.675808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 3]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["name", "Day B"], ["routine_id", 1], ["created_at", "2017-01-03 16:28:54.693808"], ["updated_at", "2017-01-03 16:28:54.693808"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day B"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Overhead Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.710808"], ["updated_at", "2017-01-03 16:28:54.710808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 4]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Barbell Rows"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.729808"], ["updated_at", "2017-01-03 16:28:54.729808"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 5]]
+  [1m[35m (5.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Deadlift"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:28:54.745808"], ["updated_at", "2017-01-03 16:28:54.745808"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 6]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2017-01-03 16:28:54.763808"], ["updated_at", "2017-01-03 16:28:54.763808"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2017-01-03 16:28:54.776808"], ["updated_at", "2017-01-03 16:28:54.776808"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (9.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (8.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (18.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (16.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (23.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (9.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (21.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (13.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (24.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (17.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (16.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (9.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (7.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (6.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (6.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "exercise_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "routine_id" integer) [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_on_routine_id" ON "exercise_groups" ("routine_id")[0m
+  [1m[35m (16.0ms)[0m  CREATE TABLE "exercise_groups_exercises" ("exercise_id" integer NOT NULL, "exercise_group_id" integer NOT NULL) 
+  [1m[36m (12.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_group_id" ON "exercise_groups_exercises" ("exercise_group_id")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (16.0ms)[0m  [1mCREATE  INDEX "index_exercise_groups_exercises_on_exercise_id" ON "exercise_groups_exercises" ("exercise_id")[0m
+  [1m[35m (15.0ms)[0m  CREATE TABLE "exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "weight" float, "weight_increment" float, "reps_goal" integer, "sets_goal" integer, "time_between_sets" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (15.0ms)[0m  [1mCREATE TABLE "routines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "active_status" integer DEFAULT 0) [0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_routines_on_active_status" ON "routines" ("active_status")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+[0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_routines_on_user_id" ON "routines" ("user_id")
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "remember_digest" varchar, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (16.0ms)[0m  CREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")
+  [1m[36m (22.0ms)[0m  [1mCREATE TABLE "workout_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "exercise_group_id" integer) [0m
+  [1m[35m (15.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_exercise_group_id" ON "workout_sessions" ("exercise_group_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
+  [1m[35m (17.0ms)[0m  CREATE  INDEX "index_workout_sessions_on_user_id" ON "workout_sessions" ("user_id")
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (23.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119231928')
+  [1m[36m (14.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160724235829')[0m
+  [1m[35m (15.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160725001103')
+  [1m[36m (36.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160725003040')[0m
+  [1m[35m (33.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160726213020')
+  [1m[36m (6.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161008062050')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019070921')
+  [1m[36m (15.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019071002')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019071901')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019072953')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161019073146')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161019214718')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161024212937')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161103004615')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161114212532')
+  [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161117041535')[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118031456')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161118034831')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161118045756')
+  [1m[36m (13.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161119205230')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161119230509')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jeff@example.org') LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Jeff"], ["email", "jeff@example.org"], ["password_digest", "$2a$10$VCIVSrJmVlMS8kr46fvsw.TrKb/ErPMtKublUP00aORR0MMjdgSgG"], ["admin", "t"], ["created_at", "2017-01-03 16:29:14.025808"], ["updated_at", "2017-01-03 16:29:14.025808"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jake@example.org') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jake"], ["email", "jake@example.org"], ["password_digest", "$2a$10$L6FWyCt95aduDWjGO4CpgunBxQqZ.R8exAU2ZuWAuPFcZYzOHsj9y"], ["created_at", "2017-01-03 16:29:14.170808"], ["updated_at", "2017-01-03 16:29:14.170808"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "active_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Phrak's Grey Skull LP"], ["user_id", 1], ["active_status", 1], ["created_at", "2017-01-03 16:29:14.292808"], ["updated_at", "2017-01-03 16:29:14.292808"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["name", "Day A"], ["routine_id", 1], ["created_at", "2017-01-03 16:29:14.330808"], ["updated_at", "2017-01-03 16:29:14.330808"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day A"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bench Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.421808"], ["updated_at", "2017-01-03 16:29:14.421808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 1]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Squat"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.454808"], ["updated_at", "2017-01-03 16:29:14.454808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 2]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Chinup"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.474808"], ["updated_at", "2017-01-03 16:29:14.474808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 1], ["exercise_id", 3]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "exercise_groups" ("id", "name", "routine_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["name", "Day B"], ["routine_id", 1], ["created_at", "2017-01-03 16:29:14.487808"], ["updated_at", "2017-01-03 16:29:14.487808"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExerciseGroup Load (2.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."name" = ? LIMIT 1  [["name", "Day B"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Overhead Press"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.507808"], ["updated_at", "2017-01-03 16:29:14.507808"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 4]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Barbell Rows"], ["weight", 45.0], ["weight_increment", 2.5], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.529808"], ["updated_at", "2017-01-03 16:29:14.529808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 5]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "exercises" ("name", "weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Deadlift"], ["weight", 45.0], ["weight_increment", 5.0], ["reps_goal", 5], ["sets_goal", 3], ["time_between_sets", 90], ["created_at", "2017-01-03 16:29:14.551808"], ["updated_at", "2017-01-03 16:29:14.551808"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (?, ?)[0m  [["exercise_group_id", 2], ["exercise_id", 6]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Starting Strength"], ["user_id", 1], ["created_at", "2017-01-03 16:29:14.567808"], ["updated_at", "2017-01-03 16:29:14.567808"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "routines" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Strong Lifts 5x5"], ["user_id", 2], ["created_at", "2017-01-03 16:29:14.592808"], ["updated_at", "2017-01-03 16:29:14.592808"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36mWorkoutSession Load (15.6ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2017-01-03 16:52:03.467169"], ["user_id", 1], ["created_at", "2017-01-03 16:52:09.162716"], ["updated_at", "2017-01-03 16:52:09.162716"]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mWorkoutSession Load (15.6ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions"  ORDER BY "workout_sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 17:02:29.919220"], ["updated_at", "2017-01-03 17:02:29.919220"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 2], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 17:02:29.934820"], ["updated_at", "2017-01-03 17:02:29.934820"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 3], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 17:02:29.937820"], ["updated_at", "2017-01-03 17:02:29.937820"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]

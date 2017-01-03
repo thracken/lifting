@@ -10,9 +10,9 @@ class WorkoutSessionsController < ApplicationController
   def create
     @workout_session = current_user.workout_sessions.build(workout_sessions_params)
     if @workout_session.save
-      @workout_session.build_workout_exercises(get_active_routine, get_next_workout_group)
+      @workout_session.build_workout_exercises(@workout_session.get_active_routine, @workout_session.get_next_workout_group)
       flash[:success] = "Session Started!"
-      redirect_to @workout_session
+      redirect_to edit_workout_session_url(@workout_session)
     else
       render 'new'
     end

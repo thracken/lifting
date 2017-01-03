@@ -3,13 +3,13 @@ class WorkoutSession < ActiveRecord::Base
   has_many :workout_exercises
 
   def get_active_routine
-    current_user.routines.find_by(active_status: 1)
+    self.user.routines.find_by(active_status: 1)
   end
 
   def get_next_workout_group
     all_groups = self.get_active_routine.exercise_groups
-    previous_workout_session = WorkoutSession.find_by(:user => User.first)]
-    
+    previous_workout_session = WorkoutSession.find_by(:user => User.first)
+
     if previous_workout_session.class == Array
       last_workout_group = previous_workout_session.last.exercise_group_id
     elsif previous_workout_session.class == WorkoutSession
@@ -18,10 +18,12 @@ class WorkoutSession < ActiveRecord::Base
       last_workout_group = nil
     end
 
-    all_groups.each_with_index do |element, index|
+    return all_groups.first if last_workout_group.nil?
+
+    all_groups.each_with_index do |group, index|
       next_in_line = all_groups[index+1]
-      if element.id = last_workout_group.id
-        if next_in_line.nil? || last_workout_group.nil?
+      if group.id = last_workout_group
+        if next_in_line.nil?
           return all_groups.first
         else
           return next_in_line
