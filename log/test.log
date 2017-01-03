@@ -12490,3 +12490,1991 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 79ms (Views: 56.0ms | ActiveRecord: 0.0ms)
   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 20:54:13', '2017-01-03 20:54:13', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 20:54:13', '2017-01-03 20:54:13', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 20:54:13', '2017-01-03 20:54:13', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$ZeD85nTJ5quPjUGz0vfSmuc4Gl/218jaBKzgTGsIcayb4NJhwWnLu', 't', '2017-01-03 20:54:13', '2017-01-03 20:54:13', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$TQpn9sXR6CAKxRXIzfvdHupszZW9zov1tmfpU8KRZgiCjSpFggmkO', 'f', '2017-01-03 20:54:13', '2017-01-03 20:54:13', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:54:13 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (31.2ms)
+  Rendered users/new.html.erb within layouts/application (46.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (15.6ms)
+Completed 200 OK in 140ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:54:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:54:13 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 0ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:54:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$GbAgBGL0u4NOgIipgc/5pODwk7f2HKzy3k/blkNr5IlvHHFCai5rC"], ["created_at", "2017-01-03 20:54:13.937120"], ["updated_at", "2017-01-03 20:54:13.937120"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 13:54:13 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (31.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["date", "2017-01-03 20:54:14.033120"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 20:54:14.068120"], ["updated_at", "2017-01-03 20:54:14.068120"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.106320"], ["updated_at", "2017-01-03 20:54:14.106320"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.111320"], ["updated_at", "2017-01-03 20:54:14.111320"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.113320"], ["updated_at", "2017-01-03 20:54:14.113320"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (1.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$7JujSBN9/okp8w76fcbZLO3bZbNEV.n951/Limg8x9e/Q4SKpVcQa"], ["updated_at", "2017-01-03 20:54:14.185520"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 33ms (ActiveRecord: 0.0ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 28ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>{"date"=>"2017-01-03 13:54:14 -0700", "user_id"=>"750111230"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["date", "2017-01-03 20:54:14.000000"], ["user_id", 750111230], ["created_at", "2017-01-03 20:54:14.251720"], ["updated_at", "2017-01-03 20:54:14.251720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "workout_sessions" SET "exercise_group_id" = ? WHERE "workout_sessions"."id" = ?[0m  [["exercise_group_id", 750101705], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.251720"], ["updated_at", "2017-01-03 20:54:14.251720"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.267320"], ["updated_at", "2017-01-03 20:54:14.267320"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:54:14.267320"], ["updated_at", "2017-01-03 20:54:14.267320"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/workout_sessions/1/edit
+Completed 302 Found in 48ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+  [1m[35m (46.8ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$DajpzorXVOm/CukroeaZj.m.q9rqdVQQE0ocUsyciXyJVeG4XyGNC"], ["updated_at", "2017-01-03 20:54:14.400920"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered routines/_form.html.erb (2.0ms)
+  Rendered routines/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:54:14 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 750111230]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 344247047]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$muqo2KX3S.qygPQ/iKHOJuvatLPvRZcBKfFe098T.UYjtOcKs2pNi"], ["created_at", "2017-01-03 20:54:14.488720"], ["updated_at", "2017-01-03 20:54:14.488720"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  [1m[35m (8.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$1h1mceL.Ru7Ct5eDYT1Ncurrj3QrwGbeqckkf2q46ySa3O/lesFuy"], ["created_at", "2017-01-03 20:54:14.515720"], ["updated_at", "2017-01-03 20:54:14.515720"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (5.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 20:55:27', '2017-01-03 20:55:27', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 20:55:27', '2017-01-03 20:55:27', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 20:55:27', '2017-01-03 20:55:27', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$b57BTWFVtVUzCs1qZWfPIesslm4KHMO.LbfSGObN2lqTkWs7lYPWG', 't', '2017-01-03 20:55:27', '2017-01-03 20:55:27', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$0Z9WJXvqAJvpyw6gJZFYG.7YyH2lbdsn8EwDWZmvTkowkl.53f/96', 'f', '2017-01-03 20:55:27', '2017-01-03 20:55:27', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (1.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["date", "2017-01-03 20:55:27.099320"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 20:55:27.200120"], ["updated_at", "2017-01-03 20:55:27.200120"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:55:27.228720"], ["updated_at", "2017-01-03 20:55:27.228720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:55:27.233720"], ["updated_at", "2017-01-03 20:55:27.233720"]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:55:27.236720"], ["updated_at", "2017-01-03 20:55:27.236720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$iO.aqXdHvZ1TmPSJD2vB/Oo6ErB7Co4Qqyj3JjeHSC2CVW171zKmS"], ["updated_at", "2017-01-03 20:55:27.396320"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered routines/_form.html.erb (15.0ms)
+  Rendered routines/new.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 750111230]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 344247047]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (15.6ms)
+  Rendered users/_form.html.erb (15.6ms)
+  Rendered users/new.html.erb within layouts/application (51.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 0ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 0ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$60uFZDRsx/KXQQUXL/uYhOOVnWXsDzKq18qXm8ofvIqI51Vre2PzK"], ["created_at", "2017-01-03 20:55:27.697720"], ["updated_at", "2017-01-03 20:55:27.697720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (47.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 71ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$PCZAZ5MGg/06SBwLOR26qeube/9xdFW2trrjKIwIfbq880HtYqaXy"], ["created_at", "2017-01-03 20:55:27.799720"], ["updated_at", "2017-01-03 20:55:27.799720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111231]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$t019AEr2ifD/1xopq7N2Pewg5J28YnQ3fshVgc1sA/.uIXD9QheUi"], ["created_at", "2017-01-03 20:55:27.822720"], ["updated_at", "2017-01-03 20:55:27.822720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$3kJHPg17GnSYgM3z4qGCnOw9G8YyhLuyjAE1uVM8iyVa/XliqJYXW"], ["updated_at", "2017-01-03 20:55:27.850720"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 13:55:27 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>"#<WorkoutSession:0x5791098>"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (9.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 20:57:54', '2017-01-03 20:57:54', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 20:57:54', '2017-01-03 20:57:54', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 20:57:54', '2017-01-03 20:57:54', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$BoSatjELnrqTPmtKUnt/Ru.5kK3xDvlJCb2TetOFymsK7XDGtcpcm', 't', '2017-01-03 20:57:54', '2017-01-03 20:57:54', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$jt1rEmMoIc.H08f9LM8uFOtkoYxOREiiEEuj5FRuEwbM6HcKX93yW', 'f', '2017-01-03 20:57:54', '2017-01-03 20:57:54', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:57:54 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (15.6ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$L9.fcCu.erLATfeQ4o7KkufsthB8OX0pyNI0LSH5XsVJYY4L77FOK"], ["updated_at", "2017-01-03 20:57:54.900920"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 31ms (ActiveRecord: 15.6ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 13:57:54 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 143ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>{"date"=>"2017-01-03 13:57:55 -0700", "user_id"=>"750111230"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["date", "2017-01-03 20:57:55.000000"], ["user_id", 750111230], ["created_at", "2017-01-03 20:57:55.076320"], ["updated_at", "2017-01-03 20:57:55.076320"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?[0m  [["exercise_group_id", 750101705], ["updated_at", "2017-01-03 20:57:55.091920"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.123120"], ["updated_at", "2017-01-03 20:57:55.123120"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.123120"], ["updated_at", "2017-01-03 20:57:55.123120"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.123120"], ["updated_at", "2017-01-03 20:57:55.123120"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/workout_sessions/1/edit
+Completed 302 Found in 62ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+  [1m[35m (15.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (46.8ms)
+  Rendered users/new.html.erb within layouts/application (46.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$PiVlc0SbnF.Wk9QAoZYyoOvQsbkmG/iv.Aj9r4xP9/f0peWoO8BYK"], ["created_at", "2017-01-03 20:57:55.230720"], ["updated_at", "2017-01-03 20:57:55.230720"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/_errors.html.erb (3.0ms)
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$8EenaT0MWdDbiQHwjSXjBueb5YKjpPRnMhQET6WnRN6/3CM2aDbG6"], ["updated_at", "2017-01-03 20:57:55.349920"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 33ms (ActiveRecord: 0.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered routines/_form.html.erb (1.0ms)
+  Rendered routines/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 19ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:57:55 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 750111230]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 344247047]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$xI7WrKppK8.zAUuVirXIY.Cb3rIpn5KF6UfiqKaPYRmCIF2J8gD.G"], ["created_at", "2017-01-03 20:57:55.447720"], ["updated_at", "2017-01-03 20:57:55.447720"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1
+  [1m[36m (32.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$tGc1aMx5klCC2TI/iKmPLuRaZvAz94ZqMRZOtbYiNFq7..0T/zNkq"], ["created_at", "2017-01-03 20:57:55.483920"], ["updated_at", "2017-01-03 20:57:55.483920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2017-01-03 20:57:55.525920"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 20:57:55.531920"], ["updated_at", "2017-01-03 20:57:55.531920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.537920"], ["updated_at", "2017-01-03 20:57:55.537920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.540920"], ["updated_at", "2017-01-03 20:57:55.540920"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:57:55.546920"], ["updated_at", "2017-01-03 20:57:55.546920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (1.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 20:58:35', '2017-01-03 20:58:35', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 20:58:35', '2017-01-03 20:58:35', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 20:58:35', '2017-01-03 20:58:35', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$YwvCLJwgRgHPmdygQKt7Kuva9xNg2elP1WLlXfoXB4XdfhtUM9KsG', 't', '2017-01-03 20:58:35', '2017-01-03 20:58:35', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$2NB9M4Egv9aeYQezAe0DBufKKC8hNLPvbsmWm17/muR1WCm0Jbxsa', 'f', '2017-01-03 20:58:35', '2017-01-03 20:58:35', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (49.8ms)
+  Rendered users/new.html.erb within layouts/application (65.8ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 200 OK in 172ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/_errors.html.erb (2.0ms)
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$XlGOh92yvcg64vxKPZRZoe78nheC620q/ptnETPAKCyUxEtu3sl9e"], ["created_at", "2017-01-03 20:58:35.553920"], ["updated_at", "2017-01-03 20:58:35.553920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$sBUVfRw3IZrK.YERLTKL0uogdKRFzI5YSmyAtPlINdj0Btrjx1s.G"], ["updated_at", "2017-01-03 20:58:35.654920"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered routines/_form.html.erb (1.0ms)
+  Rendered routines/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 750111230]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 344247047]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$pm93NysTb1/aoZyczrigqOgtVZjOaeVHAn2BNmfFTCOIzJzR2WSPO"], ["updated_at", "2017-01-03 20:58:35.849920"], ["id", 750111230]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_sessions"
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 13:58:35 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>{"date"=>"2017-01-03 13:58:35 -0700", "user_id"=>"750111230"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2017-01-03 20:58:35.000000"], ["user_id", 750111230], ["created_at", "2017-01-03 20:58:35.905920"], ["updated_at", "2017-01-03 20:58:35.905920"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRoutine Load (1.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?  [["exercise_group_id", 750101705], ["updated_at", "2017-01-03 20:58:35.910920"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:35.922920"], ["updated_at", "2017-01-03 20:58:35.922920"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:35.924920"], ["updated_at", "2017-01-03 20:58:35.924920"]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:35.926920"], ["updated_at", "2017-01-03 20:58:35.926920"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/workout_sessions/1/edit
+Completed 302 Found in 26ms (ActiveRecord: 4.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_sessions"
+  [1m[36m (71.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["date", "2017-01-03 20:58:36.002720"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 20:58:36.008720"], ["updated_at", "2017-01-03 20:58:36.008720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:36.017720"], ["updated_at", "2017-01-03 20:58:36.017720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:36.027720"], ["updated_at", "2017-01-03 20:58:36.027720"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 20:58:36.031720"], ["updated_at", "2017-01-03 20:58:36.031720"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$RoeJUAcl5IvlNSFUGHbQE.h.ZCTadFVZ7kWIw495HBj5bq8KtdEoy"], ["created_at", "2017-01-03 20:58:36.147520"], ["updated_at", "2017-01-03 20:58:36.147520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (15.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$8MWwCEZ6CTSlv0BdlA7X5uqMgU5949/972clNXwBQUFiGLy10uq0m"], ["created_at", "2017-01-03 20:58:36.196120"], ["updated_at", "2017-01-03 20:58:36.196120"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  [1m[35m (31.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 21:05:14', '2017-01-03 21:05:14', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 21:05:15', '2017-01-03 21:05:15', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 21:05:15', '2017-01-03 21:05:15', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 21:05:15', '2017-01-03 21:05:15', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 21:05:15', '2017-01-03 21:05:15', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 21:05:15', '2017-01-03 21:05:15', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$2zllEoJw3OprGUgRsAX2qemYndi0SAm4oEEqSBjUlPwVneQ.WNAiK', 't', '2017-01-03 21:05:15', '2017-01-03 21:05:15', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$rHfv1MblQHVMgEtbJo1GIugD1sA.HN6n/cOLrN.3XkT1r6NsNZCbW', 'f', '2017-01-03 21:05:15', '2017-01-03 21:05:15', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$6JxFpvSOvqTkf4Asa9brRO9PqAsTV0.Vjo7OjOXZ72/p8ZU4FxKzC"], ["created_at", "2017-01-03 21:05:15.094520"], ["updated_at", "2017-01-03 21:05:15.094520"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111231]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$fvNOh1gkt6tggkLXKDhgQuN7TiqqSEKeKlOYm94c9BHZB9euaGKXm"], ["created_at", "2017-01-03 21:05:15.151520"], ["updated_at", "2017-01-03 21:05:15.151520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_flash.html.erb (10.0ms)
+  Rendered layouts/_header.html.erb (10.0ms)
+Completed 200 OK in 132ms (Views: 131.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered users/_errors.html.erb (10.0ms)
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$zeXl4ZZFWl5.PArXbgg2guMP.kpX/K4al0xcusBOQgSjFukrsJCRi"], ["created_at", "2017-01-03 21:05:15.519520"], ["updated_at", "2017-01-03 21:05:15.519520"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$duQc34/mj/u0zWprMvqUZ.a4uMuoWLoppZPwokUPszOj8XJ3k0EXS"], ["updated_at", "2017-01-03 21:05:15.598520"], ["id", 750111230]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_sessions"
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>{"date"=>"2017-01-03 14:05:15 -0700", "user_id"=>"750111230"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2017-01-03 21:05:15.000000"], ["user_id", 750111230], ["created_at", "2017-01-03 21:05:15.693520"], ["updated_at", "2017-01-03 21:05:15.693520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.0ms)[0m  UPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?  [["exercise_group_id", 750101705], ["updated_at", "2017-01-03 21:05:15.713520"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.753520"], ["updated_at", "2017-01-03 21:05:15.753520"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.753520"], ["updated_at", "2017-01-03 21:05:15.753520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.763520"], ["updated_at", "2017-01-03 21:05:15.763520"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/workout_sessions/1/edit
+Completed 302 Found in 103ms (ActiveRecord: 10.0ms)
+Started GET "/workout_sessions/1/edit" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_sessions"
+  [1m[36m (40.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$7O4siAysyV2fAEr9Qy7rW.is4qSWa3gQ0sIJM83Tad/K77092BS8i"], ["updated_at", "2017-01-03 21:05:15.827520"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by RoutinesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered routines/_form.html.erb (0.0ms)
+  Rendered routines/new.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 74ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (10.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 750111230]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 344247047]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 24.5ms | ActiveRecord: 10.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 14:05:15 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2017-01-03 21:05:15.972520"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 21:05:15.982520"], ["updated_at", "2017-01-03 21:05:15.982520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.989520"], ["updated_at", "2017-01-03 21:05:15.989520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.994520"], ["updated_at", "2017-01-03 21:05:15.994520"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:05:15.998520"], ["updated_at", "2017-01-03 21:05:15.998520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 344247047]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 750101705]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (1.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "exercises"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 651748134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 2.5, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 176944289)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercises" ("weight", "weight_increment", "reps_goal", "sets_goal", "time_between_sets", "created_at", "updated_at", "id") VALUES (45.0, 5.0, 5, 3, 90, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 355393032)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "exercise_groups_exercises"
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "exercise_groups"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 651748134)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 308801414)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (901576061, 281690873)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 1036287166)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 176944289)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "exercise_groups_exercises" ("exercise_group_id", "exercise_id") VALUES (750101705, 355393032)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day A', '2017-01-03 21:52:49', '2017-01-03 21:52:49', 901576061, 344247047)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercise_groups" ("name", "created_at", "updated_at", "id", "routine_id") VALUES ('Day B', '2017-01-03 21:52:49', '2017-01-03 21:52:49', 750101705, 344247047)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "routines"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Phrak''s Grey Skull LP', 1, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 344247047, 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('Starting Strength', 0, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 355311816, 750111230)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "routines" ("name", "active_status", "created_at", "updated_at", "id", "user_id") VALUES ('StrongLifts 5x5', 1, '2017-01-03 21:52:49', '2017-01-03 21:52:49', 1055586497, 119230169)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('Jeff', 'jeff@test.com', '$2a$04$YLK9oTZiu0xL14nz5kBS7.z6c4i3uKXcgLYR5kK9BdDzZ9MuquNVa', 't', '2017-01-03 21:52:49', '2017-01-03 21:52:49', 750111230)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at", "id") VALUES ('jake', 'jake@test.com', '$2a$04$tY2XHAOlxRUYJzGR6LWv4OHH6cieP31zVFkb8wx1MwLyPunr5G.Iy', 'f', '2017-01-03 21:52:49', '2017-01-03 21:52:49', 119230169)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "workout_exercises"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "workout_sessions"
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+UserWorkoutSessionTest: test_create_a_new_workout_session
+---------------------------------------------------------
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 14:52:49 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$xtUthKjsUlpM0nfED5VAN.gHjnoTmeGk1qba.xC5MjC00teeEd3Km"], ["updated_at", "2017-01-03 21:52:49.882020"], ["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 44ms (ActiveRecord: 2.0ms)
+Started GET "/workout_sessions/new" for 127.0.0.1 at 2017-01-03 14:52:49 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 104ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+Started POST "/workout_sessions" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"workout_session"=>{"date"=>"2017-01-03 14:52:50 -0700", "user_id"=>"750111230"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["date", "2017-01-03 21:52:50.000000"], ["user_id", 750111230], ["created_at", "2017-01-03 21:52:50.038020"], ["updated_at", "2017-01-03 21:52:50.038020"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1[0m  [["routine_id", 344247047]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?[0m  [["exercise_group_id", 750101705], ["updated_at", "2017-01-03 21:52:50.052020"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.079020"], ["updated_at", "2017-01-03 21:52:50.079020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.081020"], ["updated_at", "2017-01-03 21:52:50.081020"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.083020"], ["updated_at", "2017-01-03 21:52:50.083020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/workout_sessions/1/edit
+Completed 302 Found in 71ms (ActiveRecord: 3.0ms)
+Started GET "/workout_sessions/1/edit" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+  [1m[35m (13.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------
+UserRoutinesTest: test_logged_in_users_can_see_all_routines,_and_create_new_routines
+------------------------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started POST "/login" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"jeff@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$iEaLZJ3hvv5eb2UqsuT84eQQHnmsAy/h9Vl8yKD7gH0bxDY0Taww."], ["updated_at", "2017-01-03 21:52:50.126020"], ["id", 750111230]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by RoutinesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  Rendered routines/_form.html.erb (17.0ms)
+  Rendered routines/new.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 750111230]]
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 344247047]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 750101705]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 901576061]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 355311816]]
+  Rendered routines/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+UserRoutinesTest: test_require_a_logged_in_user_to_see/create_a_routine
+-----------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+Started GET "/routines/new" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by RoutinesController#new as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/routines" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by RoutinesController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------
+UserSignupTest: test_invalid_sign_up
+------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (1.0ms)
+  Rendered users/_form.html.erb (26.0ms)
+  Rendered users/new.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+UserSignupTest: test_valid_sign_up
+----------------------------------
+Started GET "/signup" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_errors.html.erb (0.0ms)
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 0ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Dennis", "email"=>"dennis@paddyspub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dennis@paddyspub.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dennis"], ["email", "dennis@paddyspub.com"], ["password_digest", "$2a$04$9WWb5HOa32WOKXGl.AWCheJoSfFOTYmO1bHI4ukQAWZ4tHfPOypR6"], ["created_at", "2017-01-03 21:52:50.430020"], ["updated_at", "2017-01-03 21:52:50.430020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-03 14:52:50 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------
+UsersControllerTest: test_
+--------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+WorkoutSessionTest: test_get_next_workout_group
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+WorkoutSessionTest: test_get_active_routine
+-------------------------------------------
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (1.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+WorkoutSessionTest: test_build_workout_exercises
+------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111230]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 344247047]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 901576061]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_exercises"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 750111230]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 750111230], ["active_status", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 750111230], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 750111230 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  ORDER BY "exercise_groups"."id" ASC LIMIT 1  [["routine_id", 344247047]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "exercise_group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["date", "2017-01-03 21:52:50.516020"], ["user_id", 750111230], ["exercise_group_id", 750101705], ["created_at", "2017-01-03 21:52:50.524020"], ["updated_at", "2017-01-03 21:52:50.524020"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 750101705]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 1036287166], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.531020"], ["updated_at", "2017-01-03 21:52:50.531020"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 1], ["exercise_id", 176944289], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.535020"], ["updated_at", "2017-01-03 21:52:50.535020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 1], ["exercise_id", 355393032], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-03 21:52:50.539020"], ["updated_at", "2017-01-03 21:52:50.539020"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "workout_exercises"
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Test User"], ["email", "testy@example.com"], ["password_digest", "$2a$04$wJ7JnjgUxlOe2jUFDrQbEOPUBaCqQtb/1nQvQUabrt.9Vd4u57Ql6"], ["created_at", "2017-01-03 21:52:50.573020"], ["updated_at", "2017-01-03 21:52:50.573020"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('TESTY@EXAMPLE.COM') LIMIT 1
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_email_should_be_255_chars_or_less
+------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------
+UserTest: test_password_should_be_at_least_10_chars_long
+--------------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_password_should_not_be_blank
+-------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+UserTest: test_name_should_be_60_chars_or_less
+----------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar..com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "foo@example.com"], ["name", "Test User"], ["password_digest", "$2a$04$vyWu9cv2DmD.HU3lJByJderSQTBk7xqdACmR5/CTwF.FrFlI9djYC"], ["created_at", "2017-01-03 21:52:50.657020"], ["updated_at", "2017-01-03 21:52:50.657020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 750111231]]
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
