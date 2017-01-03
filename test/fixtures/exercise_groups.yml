@@ -1,0 +1,7 @@
+day_a:
+  name: Day A
+  routine: phraks
+
+day_b:
+  name: Day B
+  routine: phraks

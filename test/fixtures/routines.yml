@@ -1,5 +1,9 @@
 phraks:
   name: Phrak's Grey Skull LP
+  active_status: 1
+  user: jeff
 
 stronglifts:
   name: StrongLifts 5x5
+  active_status: 0
+  user: jeff
