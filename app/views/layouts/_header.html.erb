@@ -13,10 +13,13 @@
       <ul class="nav navbar-nav navbar-left">
         <% if logged_in? %>
           <li>
-            <%= link_to "Routines", routines_url %>
+            <%= link_to "New Workout", new_workout_session_url %>
           </li>
           <li>
-            <%= link_to "Log a Workout", new_workout_session_url %>
+            <%= link_to "Workout Log", workout_sessions_url %>
+          </li>
+          <li>
+            <%= link_to "Routines", routines_url %>
           </li>
         <% end %>
       </ul>
