@@ -52535,3 +52535,150 @@ Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-04 12:41:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveRepsActualFromWorkoutExercises (20170104200013)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveRepsActualFromWorkoutExercises (20170104200013)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "aworkout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "reps_actual" integer) [0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_workout_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_workout_session_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "tindex_aworkout_exercises_on_workout_session_id" ON "aworkout_exercises" ("workout_session_id")[0m
+  [1m[35m (0.0ms)[0m  CREATE  INDEX "tindex_aworkout_exercises_on_exercise_id" ON "aworkout_exercises" ("exercise_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "workout_exercises"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aworkout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at","reps_actual") VALUES (1, 1, 1, 3, 5, '2017-01-04 04:24:45.683160', '2017-01-04 04:24:45.683160', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aworkout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at","reps_actual") VALUES (2, 1, 2, 3, 5, '2017-01-04 04:24:45.706182', '2017-01-04 04:24:45.706182', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aworkout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at","reps_actual") VALUES (3, 1, 3, 3, 5, '2017-01-04 04:24:45.722698', '2017-01-04 04:24:45.722698', NULL)
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "workout_exercises"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "workout_exercises" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "workout_session_id" integer, "exercise_id" integer, "sets_goal" integer, "reps_goal" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aworkout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aworkout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aworkout_exercises_on_workout_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aworkout_exercises_on_workout_session_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_workout_exercises_on_exercise_id" ON "workout_exercises" ("exercise_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_workout_exercises_on_workout_session_id" ON "workout_exercises" ("workout_session_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aworkout_exercises"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at") VALUES (1, 1, 1, 3, 5, '2017-01-04 04:24:45.683160', '2017-01-04 04:24:45.683160')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "workout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at") VALUES (2, 1, 2, 3, 5, '2017-01-04 04:24:45.706182', '2017-01-04 04:24:45.706182')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "workout_exercises" ("id","workout_session_id","exercise_id","sets_goal","reps_goal","created_at","updated_at") VALUES (3, 1, 3, 3, 5, '2017-01-04 04:24:45.722698', '2017-01-04 04:24:45.722698')[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "aworkout_exercises"
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170104200013"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_on_routine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_on_routine_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exercise_groups_exercises_on_exercise_group_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_routines_on_active_status' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_workout_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_workout_session_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_exercises_on_exercise_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_workout_sessions_on_exercise_group_id' AND type='index'
+[0m
