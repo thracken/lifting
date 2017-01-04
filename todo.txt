@@ -1,7 +1,7 @@
 Auto-increment exercises when new workout is logged.
 Add option to choose weight unit - lbs/kg
 
-Sets need be their own object, associated with workout exercises, with reps and weight tied to set.
 improve workout session index view
  - add methods to workout sessions?
  - create helpers?
+ - activerecord associations?

@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true, created_at: Time.now, updated_at: Time.now)
+jeff = User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true, created_at: Time.now, updated_at: Time.now)
 User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false, created_at: Time.now, updated_at: Time.now)
 
 Routine.create(name: "Phrak's Grey Skull LP", user_id: 1, active_status: 1)
@@ -25,3 +25,6 @@ group2.exercises.create(name: "Deadlift", weight: 45, weight_increment: 5, reps_
 
 Routine.create(name: "Starting Strength", user_id: 1)
 Routine.create(name: "Strong Lifts 5x5", user_id: 2)
+
+session = WorkoutSession.create(date: Time.now, user_id: jeff.id)
+session.build_workout_exercises(session.get_active_routine, session.get_next_workout_group)

@@ -22,4 +22,10 @@ class WorkoutSessionTest < ActiveSupport::TestCase
       @session.build_workout_exercises(@session.get_active_routine, @session.get_next_workout_group)
     end
   end
+
+  test "building workout exercises also build workout sets" do
+    assert_difference "WorkoutSet.count", 9 do #3 sets x 3 exercises = 9 new WorkoutSet objects
+      @session.build_workout_exercises(@session.get_active_routine, @session.get_next_workout_group)
+    end
+  end
 end
