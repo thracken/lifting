@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+
+  <div class="col-lg-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <ul class="list-group">
+        <% @workout_sessions.each do |session| %>
+          <li class="list-group-item">
+            <%= Routine.find(ExerciseGroup.find(session.exercise_group_id).routine_id).name %> <br />
+            <%= ExerciseGroup.find(session.exercise_group_id).name %> <br />
+            <%= session.date %> <br />
+            <% session.workout_exercises.each do |workout_exercise| %>
+              <%= Exercise.find(workout_exercise.exercise_id).name %> -
+              <%= workout_exercise.sets_goal %>x<%= workout_exercise.reps_actual %> @ <%= Exercise.find(workout_exercise.exercise_id).weight %> <br />
+            <% end %>
+            <%= link_to "Edit", edit_workout_session_url(session) %> <br />
+            <%= link_to "Delete", workout_session_url(session), method: "delete", data: {:confirm => 'Are you sure? This cannot be undone.'} %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-lg-2"></div>
+</div>
