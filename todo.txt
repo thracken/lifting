@@ -1,4 +1,4 @@
-Auto-increment exercises when new workout is logged.
+Auto-increment exercises when new workout is completed.
 Add option to choose weight unit - lbs/kg
 
 improve workout session index view
