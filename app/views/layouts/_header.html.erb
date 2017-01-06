@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-left">
         <% if logged_in? %>
           <li>
-            <%= link_to "New Workout", new_workout_session_url %>
+            <%= link_to "New Workout", workout_sessions_url, method: "post" %>
           </li>
           <li>
             <%= link_to "Workout Log", workout_sessions_url %>

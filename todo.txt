@@ -1,6 +1,8 @@
 Auto-increment exercises when new workout is completed.
 Add option to choose weight unit - lbs/kg
 
+New WorkoutSession link should be a hidden form, with the link as the submit button.
+
 improve workout session index view
  - add methods to workout sessions?
  - create helpers?
