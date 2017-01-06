@@ -53726,3 +53726,12 @@ Processing by WorkoutSessionsController#index as HTML
   [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered layouts/_header.html.erb (2.0ms)
 Completed 200 OK in 249ms (Views: 245.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/workout_sessions/new" for ::1 at 2017-01-06 14:13:42 -0700
+Processing by WorkoutSessionsController#new as HTML
+  Rendered workout_sessions/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 245.8ms | ActiveRecord: 0.0ms)
