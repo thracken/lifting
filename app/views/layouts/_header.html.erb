@@ -13,9 +13,6 @@
       <ul class="nav navbar-nav navbar-left">
         <% if logged_in? %>
           <li>
-            <%= link_to "New Workout", workout_sessions_url, method: "post" %>
-          </li>
-          <li>
             <%= render partial: "workout_sessions/new_workout_session_form_as_link" %>
           </li>
           <li>

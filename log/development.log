@@ -54482,3 +54482,585 @@ Processing by WorkoutSessionsController#edit as HTML
   Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
   Rendered layouts/_header.html.erb (25.0ms)
 Completed 200 OK in 350ms (Views: 337.9ms | ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "workout_sessions"[0m
+
+
+Started GET "/workout_sessions/2/edit" for ::1 at 2017-01-09 12:10:19 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (26.0ms)
+Completed 200 OK in 7682ms (Views: 7681.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-cfbdbf89fdcf9303b9e663de325ff312f92cf565538d568004885ce9f0c2770e.css?body=1" for ::1 at 2017-01-09 12:10:26 -0700
+
+
+Started GET "/workout_sessions/2/edit" for ::1 at 2017-01-09 12:11:12 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (41.0ms)
+Completed 200 OK in 6047ms (Views: 6042.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:11:18 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (31.2ms)
+Completed 200 OK in 388ms (Views: 366.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-411a896a6a943ec7224d09a125f2a4331d8166afa1fdbe4309f06f09f45a243c.css?body=1" for ::1 at 2017-01-09 12:11:19 -0700
+
+
+Started GET "/" for ::1 at 2017-01-09 12:11:20 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (47.2ms)
+Completed 200 OK in 277ms (Views: 251.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:12:12 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (15.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (28.0ms)
+Completed 200 OK in 6960ms (Views: 6959.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-328ecaa935c8acdd34684d18a93bb6171c65b0c6e53cceb0cf02772fb5db26ab.css?body=1" for ::1 at 2017-01-09 12:12:19 -0700
+
+
+Started GET "/routines" for ::1 at 2017-01-09 12:14:06 -0700
+Processing by RoutinesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?  [["user_id", 1]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (25.0ms)
+Completed 200 OK in 7858ms (Views: 7855.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2e40a007ca0ad464a8b45dc8fcf9f1fd62eea098d0b94e787c3d09519e53e00e.css?body=1" for ::1 at 2017-01-09 12:14:14 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2017-01-09 12:14:14 -0700
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 12:15:30 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"WQYjLVIsPoEV2DHsiejtRoqLLyut6FnkyhEMQBuvdJr4GxsJBzORbGFpYk64lR7T4KXtVR8ER5PiCozkdAcRdg=="}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: workout_session):
+  app/controllers/workout_sessions_controller.rb:47:in `workout_sessions_params'
+  app/controllers/workout_sessions_controller.rb:11:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (571.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (535.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1220.1ms)
+
+
+Started GET "/routines" for ::1 at 2017-01-09 12:15:47 -0700
+Processing by RoutinesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 2]]
+  Rendered routines/index.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (24.0ms)
+Completed 200 OK in 289ms (Views: 285.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:16:23 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (25.0ms)
+Completed 200 OK in 7041ms (Views: 7040.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9ba54d21234c4f67f94264afc2c1b5237286e7a314d60977ad7a10ca275eece0.css?body=1" for ::1 at 2017-01-09 12:16:30 -0700
+
+
+Started GET "/" for ::1 at 2017-01-09 12:16:45 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (28.0ms)
+Completed 200 OK in 5868ms (Views: 5866.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2c7342679aa9d737a96ae3f0529575c38ed528a1c29671d25bc172dd4ac86d13.css?body=1" for ::1 at 2017-01-09 12:16:51 -0700
+
+
+Started GET "/" for ::1 at 2017-01-09 12:17:20 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (20.0ms)
+Completed 200 OK in 6912ms (Views: 6911.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0676611fbe64a369bb5acbf08882faff7fb10a63380904a05a0a3002be7fa0e1.css?body=1" for ::1 at 2017-01-09 12:17:27 -0700
+
+
+Started GET "/" for ::1 at 2017-01-09 12:17:36 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (27.0ms)
+Completed 200 OK in 7668ms (Views: 7667.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a2e2ef653606de4fed55cd65c81d980e3e83f3f5053553a8ad50389ada0bc682.css?body=1" for ::1 at 2017-01-09 12:17:43 -0700
+
+
+Started GET "/" for ::1 at 2017-01-09 12:17:50 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (23.0ms)
+Completed 200 OK in 277ms (Views: 275.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-328ecaa935c8acdd34684d18a93bb6171c65b0c6e53cceb0cf02772fb5db26ab.css?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:50 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-09 12:17:51 -0700
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 12:21:14 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 3]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 4]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 5]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 6]]
+  Rendered workout_sessions/index.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 2949ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after "  outline": expected ";", was ": none;"):
+    2: <html>
+    3: <head>
+    4:   <title>Site Name</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/custom.scss:27
+  app/assets/stylesheets/application.scss:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__209407758_52355340'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (846.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (766.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1794.2ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 12:21:30 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT "workout_sessions".* FROM "workout_sessions"
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWorkoutSet Load (1.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 2]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 3]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 2]]
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 4]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 5]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 6]]
+  Rendered workout_sessions/index.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (28.0ms)
+Completed 200 OK in 6164ms (Views: 6160.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self-471581045997f334ae09ada44926f79abae1198ed0cd5d84475f0a0fb598e1cc.css?body=1" for ::1 at 2017-01-09 12:21:36 -0700
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 12:22:22 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Th11IDJQNVlVnhjbAgosckFzL20Z78nKlCHUai95bsDvAE0EZ0+atCEvS3kzd9/nK13tE6sD1728OlTOQNELLA==", "workout_session"=>{"date"=>"2017-01-09 12:21:36 -0700", "user_id"=>"1"}, "commit"=>"New Workout"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["date", "2017-01-09 19:21:36.000000"], ["user_id", 1], ["created_at", "2017-01-09 19:22:22.330438"], ["updated_at", "2017-01-09 19:22:22.330438"]]
+  [1m[36m (21.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mWorkoutSession Load (1.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1
+  [1m[36mExerciseGroup Load (1.0ms)[0m  [1mSELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?[0m  [["routine_id", 1]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?[0m  [["exercise_group_id", 2], ["updated_at", "2017-01-09 19:22:22.400445"], ["id", 3]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?[0m  [["exercise_group_id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 3], ["exercise_id", 4], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:22.442449"], ["updated_at", "2017-01-09 19:22:22.442449"]]
+  [1m[35m (21.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 7], ["created_at", "2017-01-09 19:22:22.514456"], ["updated_at", "2017-01-09 19:22:22.514456"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 7], ["created_at", "2017-01-09 19:22:22.541459"], ["updated_at", "2017-01-09 19:22:22.541459"]]
+  [1m[35m (17.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 7], ["created_at", "2017-01-09 19:22:22.586463"], ["updated_at", "2017-01-09 19:22:22.586463"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 3], ["exercise_id", 5], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:22.606465"], ["updated_at", "2017-01-09 19:22:22.606465"]]
+  [1m[36m (22.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (2.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 8], ["created_at", "2017-01-09 19:22:22.650470"], ["updated_at", "2017-01-09 19:22:22.650470"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 8], ["created_at", "2017-01-09 19:22:22.672472"], ["updated_at", "2017-01-09 19:22:22.672472"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 8], ["created_at", "2017-01-09 19:22:22.691474"], ["updated_at", "2017-01-09 19:22:22.691474"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 3], ["exercise_id", 6], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:22.713476"], ["updated_at", "2017-01-09 19:22:22.713476"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 9], ["created_at", "2017-01-09 19:22:22.735478"], ["updated_at", "2017-01-09 19:22:22.735478"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 9], ["created_at", "2017-01-09 19:22:22.758480"], ["updated_at", "2017-01-09 19:22:22.758480"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 9], ["created_at", "2017-01-09 19:22:22.774482"], ["updated_at", "2017-01-09 19:22:22.774482"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/workout_sessions/3/edit
+Completed 302 Found in 475ms (ActiveRecord: 199.0ms)
+
+
+Started GET "/workout_sessions/3/edit" for ::1 at 2017-01-09 12:22:22 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (20.0ms)
+Completed 200 OK in 236ms (Views: 233.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 12:22:25 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 3]]
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 4]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 5]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 9]]
+  Rendered workout_sessions/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (31.2ms)
+Completed 200 OK in 264ms (Views: 233.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 12:22:37 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TeeS0eQqKqkaGvx4snmQRTJ4gjzrMACz9NI5U4GkCAjs+qr1sTWFRG6rr9qDBGPQWFZAQlncHsTcybn37gxt5A==", "workout_session"=>{"date"=>"2017-01-09 12:22:25 -0700", "user_id"=>"1"}, "commit"=>"New Workout"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2017-01-09 19:22:25.000000"], ["user_id", 1], ["created_at", "2017-01-09 19:22:37.433108"], ["updated_at", "2017-01-09 19:22:37.433108"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (1.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?  [["exercise_group_id", 2], ["updated_at", "2017-01-09 19:22:37.473112"], ["id", 4]]
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 4], ["exercise_id", 4], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:37.516117"], ["updated_at", "2017-01-09 19:22:37.516117"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 10], ["created_at", "2017-01-09 19:22:37.553120"], ["updated_at", "2017-01-09 19:22:37.553120"]]
+  [1m[36m (21.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 10], ["created_at", "2017-01-09 19:22:37.587124"], ["updated_at", "2017-01-09 19:22:37.587124"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 10], ["created_at", "2017-01-09 19:22:37.622127"], ["updated_at", "2017-01-09 19:22:37.622127"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 4], ["exercise_id", 5], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:37.635128"], ["updated_at", "2017-01-09 19:22:37.635128"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 11], ["created_at", "2017-01-09 19:22:37.659131"], ["updated_at", "2017-01-09 19:22:37.659131"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 11], ["created_at", "2017-01-09 19:22:37.692134"], ["updated_at", "2017-01-09 19:22:37.692134"]]
+  [1m[35m (17.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 11], ["created_at", "2017-01-09 19:22:37.727138"], ["updated_at", "2017-01-09 19:22:37.727138"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 4], ["exercise_id", 6], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:22:37.778143"], ["updated_at", "2017-01-09 19:22:37.778143"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 12], ["created_at", "2017-01-09 19:22:37.806146"], ["updated_at", "2017-01-09 19:22:37.806146"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 12], ["created_at", "2017-01-09 19:22:37.835148"], ["updated_at", "2017-01-09 19:22:37.835148"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 12], ["created_at", "2017-01-09 19:22:37.859151"], ["updated_at", "2017-01-09 19:22:37.859151"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/workout_sessions/4/edit
+Completed 302 Found in 457ms (ActiveRecord: 229.0ms)
+
+
+Started GET "/workout_sessions/4/edit" for ::1 at 2017-01-09 12:22:37 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (20.0ms)
+Completed 200 OK in 251ms (Views: 248.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 12:22:39 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[35mWorkoutSession Load (0.0ms)[0m  SELECT "workout_sessions".* FROM "workout_sessions"
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRoutine Load (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 2]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 3]]
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 2]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 4]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 5]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWorkoutExercise Load (0.0ms)[0m  SELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?  [["workout_session_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkoutSet Load (15.6ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mWorkoutSet Load (0.0ms)[0m  SELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?  [["workout_exercise_id", 12]]
+  Rendered workout_sessions/index.html.erb within layouts/application (50.8ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (31.2ms)
+Completed 200 OK in 303ms (Views: 261.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:23:21 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (15.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (15.6ms)
+Completed 200 OK in 288ms (Views: 272.4ms | ActiveRecord: 0.0ms)
