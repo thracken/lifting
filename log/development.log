@@ -54003,3 +54003,482 @@ ActionController::ParameterMissing (param is missing or the value is empty: work
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1091.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:04:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_flash.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 2493ms (Views: 2458.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2017-01-09 11:04:47 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-09 11:04:47 -0700
+
+
+Started GET "/assets/custom.self-fafd9676fabf96bff452085f5767dc27beec21dab0cee8b6d2c7a87be2f8636c.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/application.self-4bfdb2f66ed1b658e851a0d62bc9961e0b32d3f689fdbe5dbccb87eabcb1cad2.css?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/exercise_groups.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/routines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/workout_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/workout_exercises.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-01-09 11:04:48 -0700
+
+
+Started GET "/login" for ::1 at 2017-01-09 11:06:12 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (113.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 375ms (Views: 354.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-01-09 11:07:51 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2uXFt2Izj1PdNIRlFrTYawUQfEjDN1YUCiaZnyDL+DKdq8yiJdh0DvFgbOlJyD0xjqDj5Hgwy94MxrCEytKDA==", "session"=>{"email"=>"jeff.greenland@exmaple.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jeff.greenland@exmaple.org"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 284ms (Views: 216.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-01-09 11:07:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KaWSoOoIBuIW35aWIT0kLNuG1qqnDiNfspBX6+aeG+CIuKqEvxepD2JuxTQQQNe5sagU1BXiPSiai9dPiTZ+DA==", "session"=>{"email"=>"jeff@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jeff@example.org"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:07:59 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 228ms (Views: 227.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 11:08:02 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mExerciseGroup Load (1.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 3]]
+  Rendered workout_sessions/index.html.erb within layouts/application (177.2ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 400ms (Views: 381.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 11:39:44 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutExercise Load (0.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutSet Load (1.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 3]]
+  Rendered workout_sessions/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 304ms (Views: 302.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/workout_sessions" for ::1 at 2017-01-09 11:39:59 -0700
+Processing by WorkoutSessionsController#index as HTML
+  [1m[36mWorkoutSession Load (0.0ms)[0m  [1mSELECT "workout_sessions".* FROM "workout_sessions"[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutExercise Load (1.0ms)[0m  [1mSELECT "workout_exercises".* FROM "workout_exercises" WHERE "workout_exercises"."workout_session_id" = ?[0m  [["workout_session_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 2]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mWorkoutSet Load (0.0ms)[0m  [1mSELECT "workout_sets".* FROM "workout_sets" WHERE "workout_sets"."workout_exercise_id" = ?[0m  [["workout_exercise_id", 3]]
+  Rendered workout_sessions/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 242ms (Views: 240.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 11:40:02 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"A3dGdX08pQY4bcbdt9+ZGnQVc6yQT40Jx8p+8RhI5hKian5RKCMK60zclX+GomqPHjux0iKjk37v0f5Vd+CD/g=="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 1.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: workout_session):
+  app/controllers/workout_sessions_controller.rb:47:in `workout_sessions_params'
+  app/controllers/workout_sessions_controller.rb:11:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (760.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (593.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1414.1ms)
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 11:42:58 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"A3dGdX08pQY4bcbdt9+ZGnQVc6yQT40Jx8p+8RhI5hKian5RKCMK60zclX+GomqPHjux0iKjk37v0f5Vd+CD/g=="}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: workout_session):
+  app/controllers/workout_sessions_controller.rb:47:in `workout_sessions_params'
+  app/controllers/workout_sessions_controller.rb:11:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (607.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (559.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1285.1ms)
+
+
+Started PUT "/__web_console/repl_sessions/6fc582e304d4290689bef1bf9bc89ae5" for ::1 at 2017-01-09 11:44:10 -0700
+
+
+Started PUT "/__web_console/repl_sessions/6fc582e304d4290689bef1bf9bc89ae5" for ::1 at 2017-01-09 11:44:31 -0700
+
+
+Started PUT "/__web_console/repl_sessions/6fc582e304d4290689bef1bf9bc89ae5" for ::1 at 2017-01-09 11:44:37 -0700
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 11:49:53 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"A3dGdX08pQY4bcbdt9+ZGnQVc6yQT40Jx8p+8RhI5hKian5RKCMK60zclX+GomqPHjux0iKjk37v0f5Vd+CD/g=="}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: workout_session):
+  app/controllers/workout_sessions_controller.rb:47:in `workout_sessions_params'
+  app/controllers/workout_sessions_controller.rb:11:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (595.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (574.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1295.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:52:05 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (25.0ms)
+  Rendered static_pages/_home_logged_in.html.erb (40.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `hidden_field_tag' for #<ActionView::Helpers::FormBuilder:0x8778c60>):
+    1: <%= form_for(:workout_session, url: workout_sessions_url, :html => {:class => ""}) do |f| %>
+    2:   <%= f.hidden_field_tag(:date, Time.now) %>
+    3:   <%= f.user_id(:date, current_user.id) %>
+    4:   <%= f.submit %>
+    5: <% end %>
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:2:in `block in _app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_71032212'
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:1:in `_app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_71032212'
+  app/views/static_pages/_home_logged_in.html.erb:10:in `_app_views_static_pages__home_logged_in_html_erb___345016888_71074104'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb__429058954_52359048'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (651.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (590.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1338.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:52:48 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (15.0ms)
+  Rendered static_pages/_home_logged_in.html.erb (28.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (43.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `merge' for 2017-01-09 11:52:48 -0700:Time):
+    1: <%= form_for(:workout_session, url: workout_sessions_url, :html => {:class => ""}) do |f| %>
+    2:   <%= f.hidden_field(:date, Time.now) %>
+    3:   <%= f.hidden_field(:user_id, current_user.id) %>
+    4:   <%= f.submit %>
+    5: <% end %>
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:2:in `block in _app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_73448532'
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:1:in `_app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_73448532'
+  app/views/static_pages/_home_logged_in.html.erb:10:in `_app_views_static_pages__home_logged_in_html_erb___345016888_71074104'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb__429058954_52359048'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (663.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (597.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1304.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:59:44 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (26.0ms)
+  Rendered static_pages/_home_logged_in.html.erb (40.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (53.0ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+    1: <%= form_for(:workout_session, url: workout_sessions_url, :html => {:class => ""}) do |f| %>
+    2:   <%= f.hidden_field(:date) %>
+    3:   <%= f.hidden_field(:user_id, current_user.id) %>
+    4:   <%= f.submit %>
+    5: <% end %>
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:3:in `block in _app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_72373836'
+  app/views/workout_sessions/_new_workout_session_form_as_link.html.erb:1:in `_app_views_workout_sessions__new_workout_session_form_as_link_html_erb__76758671_72373836'
+  app/views/static_pages/_home_logged_in.html.erb:10:in `_app_views_static_pages__home_logged_in_html_erb___345016888_71074104'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb__429058954_52359048'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (614.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (564.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1283.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:01:30 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (2.0ms)
+  Rendered static_pages/_home_logged_in.html.erb (19.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 353ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:01:31 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered static_pages/_home_logged_in.html.erb (18.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (50.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 378ms (Views: 377.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:01:53 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 239.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:02:11 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (25.0ms)
+Completed 200 OK in 267ms (Views: 265.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:02:24 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (17.0ms)
+Completed 200 OK in 220ms (Views: 218.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 12:05:12 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/_home_logged_in.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (30.0ms)
+Completed 200 OK in 341ms (Views: 340.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/workout_sessions" for ::1 at 2017-01-09 12:05:35 -0700
+Processing by WorkoutSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwoavCFosYGakN1ONTB5t0x1iSJs9LbNswbu7+EghfreFyKYdHcebO4hjuwETYoiJltLXN4YqLqbHW5LjojgFg==", "workout_session"=>{"date"=>"2017-01-09 12:05:12 -0700", "user_id"=>"1"}, "commit"=>"Hola"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_sessions" ("date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2017-01-09 19:05:12.000000"], ["user_id", 1], ["created_at", "2017-01-09 19:05:35.586060"], ["updated_at", "2017-01-09 19:05:35.586060"]]
+  [1m[35m (40.0ms)[0m  commit transaction
+  [1m[36mRoutine Load (0.0ms)[0m  [1mSELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1[0m  [["user_id", 1], ["active_status", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "routines".* FROM "routines" WHERE "routines"."user_id" = ? AND "routines"."active_status" = ? LIMIT 1  [["user_id", 1], ["active_status", 1]]
+  [1m[36mWorkoutSession Load (1.0ms)[0m  [1mSELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."user_id" = 1 LIMIT 1[0m
+  [1m[35mExerciseGroup Load (0.0ms)[0m  SELECT "exercise_groups".* FROM "exercise_groups" WHERE "exercise_groups"."routine_id" = ?  [["routine_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "workout_sessions" SET "exercise_group_id" = ?, "updated_at" = ? WHERE "workout_sessions"."id" = ?  [["exercise_group_id", 2], ["updated_at", "2017-01-09 19:05:35.684069"], ["id", 2]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT "exercises".* FROM "exercises" INNER JOIN "exercise_groups_exercises" ON "exercises"."id" = "exercise_groups_exercises"."exercise_id" WHERE "exercise_groups_exercises"."exercise_group_id" = ?  [["exercise_group_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 2], ["exercise_id", 4], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:05:35.822083"], ["updated_at", "2017-01-09 19:05:35.822083"]]
+  [1m[36m (19.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 4], ["created_at", "2017-01-09 19:05:35.852086"], ["updated_at", "2017-01-09 19:05:35.852086"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 4], ["created_at", "2017-01-09 19:05:35.871088"], ["updated_at", "2017-01-09 19:05:35.871088"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 4], ["created_at", "2017-01-09 19:05:35.912092"], ["updated_at", "2017-01-09 19:05:35.912092"]]
+  [1m[36m (18.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["workout_session_id", 2], ["exercise_id", 5], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:05:35.947096"], ["updated_at", "2017-01-09 19:05:35.947096"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 5], ["created_at", "2017-01-09 19:05:35.971098"], ["updated_at", "2017-01-09 19:05:35.971098"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 5], ["created_at", "2017-01-09 19:05:35.993100"], ["updated_at", "2017-01-09 19:05:35.993100"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 5], ["created_at", "2017-01-09 19:05:36.030104"], ["updated_at", "2017-01-09 19:05:36.030104"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "workout_exercises" ("workout_session_id", "exercise_id", "sets_goal", "reps_goal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["workout_session_id", 2], ["exercise_id", 6], ["sets_goal", 3], ["reps_goal", 5], ["created_at", "2017-01-09 19:05:36.054106"], ["updated_at", "2017-01-09 19:05:36.054106"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 6], ["created_at", "2017-01-09 19:05:36.076109"], ["updated_at", "2017-01-09 19:05:36.076109"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 6], ["created_at", "2017-01-09 19:05:36.102111"], ["updated_at", "2017-01-09 19:05:36.102111"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises" WHERE "exercises"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "workout_sets" ("reps", "weight", "workout_exercise_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["reps", 5], ["weight", 45.0], ["workout_exercise_id", 6], ["created_at", "2017-01-09 19:05:36.126114"], ["updated_at", "2017-01-09 19:05:36.126114"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/workout_sessions/2/edit
+Completed 302 Found in 594ms (ActiveRecord: 231.0ms)
+
+
+Started GET "/workout_sessions/2/edit" for ::1 at 2017-01-09 12:05:36 -0700
+Processing by WorkoutSessionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWorkoutSession Load (2.0ms)[0m  SELECT  "workout_sessions".* FROM "workout_sessions" WHERE "workout_sessions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered workout_sessions/edit.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered workout_sessions/_new_workout_session_form_as_link.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (25.0ms)
+Completed 200 OK in 350ms (Views: 337.9ms | ActiveRecord: 2.0ms)
