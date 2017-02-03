@@ -8,26 +8,21 @@ class WorkoutSession < ActiveRecord::Base
 
   def get_next_workout_group
     all_groups = self.get_active_routine.exercise_groups
-    previous_workout_session = WorkoutSession.find_by(:user => self.user)
+    previous_workout_session = WorkoutSession.where(:user => self.user).last
 
-    if previous_workout_session.class == Array
-      last_workout_group = previous_workout_session.last.exercise_group_id
-    elsif previous_workout_session.class == WorkoutSession
-      last_workout_group = previous_workout_session.exercise_group_id
+    if previous_workout_session.class == WorkoutSession
+      last_workout_group_id = previous_workout_session.exercise_group_id
     else
-      last_workout_group = nil
+      last_workout_group_id = nil
     end
 
-    return all_groups.first if last_workout_group.nil?
+    return all_groups.first if last_workout_group_id.nil?
 
     all_groups.each_with_index do |group, index|
       next_in_line = all_groups[index+1]
-      if group.id = last_workout_group
-        if next_in_line.nil?
-          return all_groups.first
-        else
-          return next_in_line
-        end
+      if group.id = last_workout_group_id
+        return all_groups[0] if next_in_line.nil?
+        return next_in_line
       end
     end
   end

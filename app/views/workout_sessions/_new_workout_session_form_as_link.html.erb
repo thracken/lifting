@@ -1,5 +1,4 @@
 <%= form_for(:workout_session, url: workout_sessions_url, :html => {:class => ""}) do |f| %>
   <%= f.hidden_field(:date, :value => Time.now) %>
-  <%= f.hidden_field(:user_id, :value => current_user.id) %>
   <%= f.submit "New Workout", class: "new-workout-session-link" %>
 <% end %>

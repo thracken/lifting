@@ -7,7 +7,7 @@ class UserWorkoutSessionTest < ActionDispatch::IntegrationTest
 
   test "create a new workout session" do
     log_in_as @user
-    get new_workout_session_url
+    post workout_sessions_url, workout_session: {date: Time.now, user_id: 1}
     assert_difference "WorkoutSession.count", 1 do
       post_via_redirect workout_sessions_url, workout_session: {date: Time.now, user_id: @user.id}
     end

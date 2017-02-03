@@ -7,3 +7,5 @@ improve workout session index view
  - add methods to workout sessions?
  - create helpers?
  - activerecord associations?
+
+fix new session grabbing next workout group
