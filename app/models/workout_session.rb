@@ -8,7 +8,7 @@ class WorkoutSession < ActiveRecord::Base
 
   def get_next_workout_group
     all_groups = self.get_active_routine.exercise_groups
-    previous_workout_session = WorkoutSession.where(:user => self.user).last
+    previous_workout_session = WorkoutSession.where(:user => self.user)[-2]
 
     if previous_workout_session.class == WorkoutSession
       last_workout_group_id = previous_workout_session.exercise_group_id
