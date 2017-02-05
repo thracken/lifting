@@ -27,4 +27,3 @@ Routine.create(name: "Starting Strength", user_id: 1)
 Routine.create(name: "Strong Lifts 5x5", user_id: 2)
 
 session = WorkoutSession.create(date: Time.now, user_id: jeff.id)
-session.build_workout_exercises(session.get_active_routine, session.get_next_workout_group)
