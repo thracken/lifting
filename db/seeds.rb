@@ -7,9 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 jeff = User.create(name: "Jeff", email: "jeff@example.org", password: "password12", password_confirmation: "password12", admin: true, created_at: Time.now, updated_at: Time.now)
-User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false, created_at: Time.now, updated_at: Time.now)
+jake = User.create(name: "Jake", email: "jake@example.org", password: "password12", password_confirmation: "password12", admin: false, created_at: Time.now, updated_at: Time.now)
 
-Routine.create(name: "Phrak's Grey Skull LP", user_id: 1, active_status: 1)
+phraks = Routine.create(name: "Phrak's Grey Skull LP", user_id: jeff.id)
+jeff.active_routine_id = phraks.id
 
 ExerciseGroup.create(name: "Day A", routine_id: 1)
 group1 = ExerciseGroup.find_by(:name => "Day A")
@@ -23,7 +24,7 @@ group2.exercises.create(name: "Overhead Press", weight: 45, weight_increment: 2.
 group2.exercises.create(name: "Barbell Rows", weight: 45, weight_increment: 2.5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
 group2.exercises.create(name: "Deadlift", weight: 45, weight_increment: 5, reps_goal: 5, sets_goal: 3, time_between_sets: 90, created_at: Time.now, updated_at: Time.now)
 
-Routine.create(name: "Starting Strength", user_id: 1)
-Routine.create(name: "Strong Lifts 5x5", user_id: 2)
+Routine.create(name: "Starting Strength", user_id: jeff.id)
+Routine.create(name: "Strong Lifts 5x5", user_id: jake.id)
 
 session = WorkoutSession.create(date: Time.now, user_id: jeff.id)

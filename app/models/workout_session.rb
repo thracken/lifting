@@ -5,10 +5,6 @@ class WorkoutSession < ActiveRecord::Base
   before_create :set_exercise_group
   after_create :build_workout_exercises
 
-  def get_active_routine
-    self.user.routines.find_by(active_status: 1)
-  end
-
   def get_next_workout_group
     all_groups = self.get_active_routine.exercise_groups
     previous_workout_session = WorkoutSession.where(:user => self.user).order(date: :desc).limit(1).first
