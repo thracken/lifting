@@ -6,7 +6,7 @@ class WorkoutSession < ActiveRecord::Base
   after_create :build_workout_exercises
 
   def get_next_workout_group
-    all_groups = self.get_active_routine.exercise_groups
+    all_groups = self.user.active_routine.exercise_groups
     previous_workout_session = WorkoutSession.where(:user => self.user).order(date: :desc).limit(1).first
 
     if previous_workout_session.nil?
@@ -31,7 +31,7 @@ class WorkoutSession < ActiveRecord::Base
     end
 
     def build_workout_exercises
-      routine = self.get_active_routine
+      routine = self.user.active_routine
       exercise_group = ExerciseGroup.find(self.exercise_group_id)
 
       exercise_group.exercises.each do |exercise|
