@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207062852) do
+ActiveRecord::Schema.define(version: 20170207064320) do
 
   create_table "exercise_groups", force: :cascade do |t|
     t.string   "name"
@@ -53,13 +53,15 @@ ActiveRecord::Schema.define(version: 20170207062852) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",             default: false
+    t.integer  "active_routine_id"
   end
 
+  add_index "users", ["active_routine_id"], name: "index_users_on_active_routine_id"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
 
   create_table "workout_exercises", force: :cascade do |t|

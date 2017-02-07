@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :routines
   has_many :workout_sessions
+  has_one :active_routine, :class_name => "Routine"
 
   def User.new_token
     SecureRandom.urlsafe_base64
